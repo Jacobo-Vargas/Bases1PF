@@ -1,6 +1,6 @@
 package com.proyecto.banco.model.domain;
 
-import com.proyecto.banco.model.domain.enums.TipoProducto;
+import com.proyecto.banco.model.enums.TipoProducto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

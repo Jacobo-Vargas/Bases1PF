@@ -1,6 +1,6 @@
 package com.proyecto.banco.model.domain;
 
-import com.proyecto.banco.model.domain.enums.FormatoFactura;
+import com.proyecto.banco.model.enums.FormatoFactura;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

@@ -1,4 +1,4 @@
-package com.proyecto.banco.model.domain.enums;
+package com.proyecto.banco.model.enums;
 
 public enum FormatoFactura {
 
