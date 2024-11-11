@@ -37,7 +37,7 @@ public class Solicitud implements Serializable {
 
     @ManyToOne
     @JsonBackReference
-    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    @JoinColumn(name = "cliente_id", referencedColumnName = "id")
     private Cliente cliente;
 
     @ManyToOne

@@ -27,6 +27,7 @@ public class Factura implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "fecha")
     private Date fecha;
 
     @Enumerated(EnumType.STRING)

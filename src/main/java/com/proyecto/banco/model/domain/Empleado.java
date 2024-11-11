@@ -13,6 +13,7 @@ import lombok.Data;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 @Entity(name = "empleado")
@@ -32,7 +33,7 @@ public class Empleado implements Serializable {
     private String cargo;
 
     @Column(name = "fecha_contratacion")
-    private String fechaContratacion;
+    private Date fechaContratacion;
 
     @Column(name = "salario")
     private BigDecimal salario;
