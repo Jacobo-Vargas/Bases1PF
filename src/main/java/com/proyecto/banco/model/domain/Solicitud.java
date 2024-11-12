@@ -35,13 +35,11 @@ public class Solicitud implements Serializable {
     @Column(name = "moneda")
     private String moneda;
 
-    @ManyToOne
-    @JsonBackReference
-    @JoinColumn(name = "cliente_id", referencedColumnName = "id")
+    @ManyToOne@JoinColumn(name = "cliente_id", referencedColumnName = "id")
     private Cliente cliente;
 
+
     @ManyToOne
-    @JsonBackReference
     @JoinColumn(name = "producto_id", referencedColumnName = "id")
     private Producto producto;
 }

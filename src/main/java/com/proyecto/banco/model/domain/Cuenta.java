@@ -1,5 +1,6 @@
 package com.proyecto.banco.model.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,6 +35,7 @@ public class Cuenta implements Serializable {
     @ManyToOne
     @JoinColumn(name = "cliente_id", referencedColumnName = "id")
     private Cliente cliente;
+
 
     @OneToOne
     @JoinColumn(name = "producto_id", referencedColumnName = "id")

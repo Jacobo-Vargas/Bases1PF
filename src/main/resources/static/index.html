@@ -1,0 +1,347 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="es">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Interfaz CRUD</title>-->
+<!--    <link rel="stylesheet" href="estilos.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <h1>Gestión de Empleados</h1>-->
+
+<!--    &lt;!&ndash; Barra de pestañas &ndash;&gt;-->
+<!--    <div class="tabs">-->
+<!--        <button class="tab-button active" onclick="showTab('empleados')">Empleados</button>-->
+<!--        <button class="tab-button" onclick="showTab('departamentos')">Departamentos</button>-->
+<!--        <button class="tab-button" onclick="showTab('salarios')">Salarios</button>-->
+<!--        <button class="tab-button" onclick="showTab('proyectos')">Proyectos</button>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Tab Empleados &ndash;&gt;-->
+<!--    <div id="empleados" class="tab-content active">-->
+<!--        <h2>Listado de Empleados</h2>-->
+<!--        <div class="table-wrapper">-->
+<!--            <table>-->
+<!--                <thead>-->
+<!--                <tr>-->
+<!--                    <th>ID</th>-->
+<!--                    <th>Nombre</th>-->
+<!--                    <th>Cargo</th>-->
+<!--                    <th>Fecha Contratación</th>-->
+<!--                    <th>Salario</th>-->
+<!--                    <th>Acciones</th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+<!--                <tbody id="empleados-list">-->
+<!--                &lt;!&ndash; Los empleados se cargarán aquí dinámicamente &ndash;&gt;-->
+<!--                </tbody>-->
+<!--            </table>-->
+<!--        </div>-->
+
+<!--        <div class="form-container">-->
+<!--            <form id="form-empleado">-->
+<!--                <h3>Agregar o Editar Empleado</h3>-->
+<!--                <input type="text" id="nombre" placeholder="Nombre" required>-->
+<!--                <input type="text" id="cargo" placeholder="Cargo" required>-->
+<!--                <input type="date" id="fecha-contratacion" required>-->
+<!--                <input type="number" id="salario" placeholder="Salario" required>-->
+<!--                <button type="submit">Guardar</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Tab Departamentos &ndash;&gt;-->
+<!--    <div id="departamentos" class="tab-content">-->
+<!--        <h2>Listado de Departamentos</h2>-->
+<!--        &lt;!&ndash; Aquí iría la tabla de departamentos &ndash;&gt;-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Tab Salarios &ndash;&gt;-->
+<!--    <div id="salarios" class="tab-content">-->
+<!--        <h2>Listado de Salarios</h2>-->
+<!--        &lt;!&ndash; Aquí iría la tabla de salarios &ndash;&gt;-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Tab Proyectos &ndash;&gt;-->
+<!--    <div id="proyectos" class="tab-content">-->
+<!--        <h2>Listado de Proyectos</h2>-->
+<!--        &lt;!&ndash; Aquí iría la tabla de proyectos &ndash;&gt;-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    // Función para cambiar de pestaña-->
+<!--    function showTab(tabId) {-->
+<!--        // Ocultar todas las pestañas-->
+<!--        const tabs = document.querySelectorAll('.tab-content');-->
+<!--        tabs.forEach(tab => tab.classList.remove('active'));-->
+
+<!--        // Mostrar la pestaña seleccionada-->
+<!--        document.getElementById(tabId).classList.add('active');-->
+
+<!--        // Cambiar el estado de los botones de las pestañas-->
+<!--        const buttons = document.querySelectorAll('.tab-button');-->
+<!--        buttons.forEach(button => button.classList.remove('active'));-->
+<!--        document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');-->
+<!--    }-->
+
+<!--    // Obtener los empleados de la API-->
+<!--    function obtenerEmpleados() {-->
+<!--        fetch('/api/empleados')-->
+<!--            .then(response => response.json())-->
+<!--            .then(data => {-->
+<!--                const empleadosList = document.getElementById('empleados-list');-->
+<!--                empleadosList.innerHTML = ''; // Limpiar la lista antes de agregar los nuevos empleados-->
+<!--                data.forEach(empleado => {-->
+<!--                    const row = document.createElement('tr');-->
+<!--                    row.innerHTML = `-->
+<!--                            <td>${empleado.id}</td>-->
+<!--                            <td>${empleado.nombre}</td>-->
+<!--                            <td>${empleado.cargo}</td>-->
+<!--                            <td>${empleado.fechaContratacion}</td>-->
+<!--                            <td>${empleado.salario}</td>-->
+<!--                            <td>-->
+<!--                                <button onclick="editarEmpleado(${empleado.id})">Editar</button>-->
+<!--                                <button onclick="eliminarEmpleado(${empleado.id})">Eliminar</button>-->
+<!--                            </td>-->
+<!--                        `;-->
+<!--                    empleadosList.appendChild(row);-->
+<!--                });-->
+<!--            })-->
+<!--            .catch(error => console.log('Error al obtener empleados:', error));-->
+<!--    }-->
+
+<!--    // Crear o editar empleado-->
+<!--    const formEmpleado = document.getElementById('form-empleado');-->
+<!--    formEmpleado.addEventListener('submit', function (e) {-->
+<!--        e.preventDefault();-->
+
+<!--        const nombre = document.getElementById('nombre').value;-->
+<!--        const cargo = document.getElementById('cargo').value;-->
+<!--        const fechaContratacion = document.getElementById('fecha-contratacion').value;-->
+<!--        const salario = document.getElementById('salario').value;-->
+
+<!--        const empleado = {-->
+<!--            nombre: nombre,-->
+<!--            cargo: cargo,-->
+<!--            fechaContratacion: fechaContratacion,-->
+<!--            salario: salario-->
+<!--        };-->
+
+<!--        const idEmpleado = formEmpleado.dataset.idEmpleado; // Obtener ID si estamos editando-->
+
+<!--        if (idEmpleado) {-->
+<!--            // Si existe un ID, es una actualización (PUT)-->
+<!--            fetch(`/api/empleados/${idEmpleado}`, {-->
+<!--                method: 'PUT',-->
+<!--                headers: {-->
+<!--                    'Content-Type': 'application/json'-->
+<!--                },-->
+<!--                body: JSON.stringify(empleado)-->
+<!--            })-->
+<!--                .then(response => response.json())-->
+<!--                .then(() => {-->
+<!--                    alert('Empleado actualizado con éxito');-->
+<!--                    formEmpleado.reset();-->
+<!--                    formEmpleado.removeAttribute('data-id-empleado'); // Limpiar el ID del empleado-->
+<!--                    obtenerEmpleados(); // Actualizar la lista-->
+<!--                });-->
+<!--        } else {-->
+<!--            // Si no hay ID, es una creación (POST)-->
+<!--            fetch('/api/empleados', {-->
+<!--                method: 'POST',-->
+<!--                headers: {-->
+<!--                    'Content-Type': 'application/json'-->
+<!--                },-->
+<!--                body: JSON.stringify(empleado)-->
+<!--            })-->
+<!--                .then(response => response.json())-->
+<!--                .then(() => {-->
+<!--                    alert('Empleado creado con éxito');-->
+<!--                    formEmpleado.reset();-->
+<!--                    obtenerEmpleados(); // Actualizar la lista-->
+<!--                });-->
+<!--        }-->
+<!--    });-->
+
+<!--    // Editar un empleado-->
+<!--    function editarEmpleado(id) {-->
+<!--        fetch(`/api/empleados/${id}`)-->
+<!--            .then(response => response.json())-->
+<!--            .then(empleado => {-->
+<!--                document.getElementById('nombre').value = empleado.nombre;-->
+<!--                document.getElementById('cargo').value = empleado.cargo;-->
+<!--                document.getElementById('fecha-contratacion').value = empleado.fechaContratacion;-->
+<!--                document.getElementById('salario').value = empleado.salario;-->
+
+<!--                // Establecer el ID del empleado en el formulario para saber que estamos editando-->
+<!--                formEmpleado.dataset.idEmpleado = empleado.id;-->
+<!--            })-->
+<!--            .catch(error => console.log('Error al obtener el empleado:', error));-->
+<!--    }-->
+
+<!--    // Eliminar un empleado-->
+<!--    function eliminarEmpleado(id) {-->
+<!--        if (confirm('¿Estás seguro de que quieres eliminar este empleado?')) {-->
+<!--            fetch(`/api/empleados/${id}`, {-->
+<!--                method: 'DELETE'-->
+<!--            })-->
+<!--                .then(response => {-->
+<!--                    if (response.ok) {-->
+<!--                        alert('Empleado eliminado con éxito');-->
+<!--                        obtenerEmpleados(); // Actualizar la lista-->
+<!--                    } else {-->
+<!--                        alert('Error al eliminar el empleado');-->
+<!--                    }-->
+<!--                })-->
+<!--                .catch(error => console.log('Error al eliminar empleado:', error));-->
+<!--        }-->
+<!--    }-->
+
+<!--    // Cargar empleados cuando la página cargue-->
+<!--    window.onload = function () {-->
+<!--        obtenerEmpleados();-->
+<!--    };-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Empleados y Clientes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .container { margin-top: 20px; }
+        .tab-content { margin-top: 20px; }
+        .form-control { max-width: 400px; margin: 10px auto; }
+        .table { margin-top: 20px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Navbar de Tabs -->
+    <ul class="nav nav-tabs" id="crudTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="empleados-tab" data-bs-toggle="tab" href="#empleados" role="tab" aria-controls="empleados" aria-selected="true">Empleados</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="clientes-tab" data-bs-toggle="tab" href="#clientes" role="tab" aria-controls="clientes" aria-selected="false">Clientes</a>
+        </li>
+    </ul>
+
+    <!-- Contenido de los Tabs -->
+    <div class="tab-content" id="crudTabsContent">
+
+        <!-- Tab de Empleados -->
+        <div class="tab-pane fade show active" id="empleados" role="tabpanel" aria-labelledby="empleados-tab">
+            <h3>Gestión de Empleados</h3>
+
+            <!-- Formulario de Empleados -->
+            <form id="formEmpleado">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cargo" class="form-label">Cargo</label>
+                    <input type="text" class="form-control" id="cargo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="fechaContratacion" class="form-label">Fecha de Contratación</label>
+                    <input type="date" class="form-control" id="fechaContratacion" required>
+                </div>
+                <div class="mb-3">
+                    <label for="salario" class="form-label">Salario</label>
+                    <input type="number" class="form-control" id="salario" required>
+                </div>
+                <div class="mb-3">
+                    <label for="apellidoUno" class="form-label">Apellido Uno</label>
+                    <input type="text" class="form-control" id="apellidoUno" required>
+                </div>
+                <div class="mb-3">
+                    <label for="apellidoDos" class="form-label">Apellido Dos</label>
+                    <input type="text" class="form-control" id="apellidoDos" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar Empleado</button>
+            </form>
+
+            <!-- Tabla de Empleados -->
+            <h4>Empleados Registrados</h4>
+            <table class="table" id="empleadosTable">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                    <th>Fecha Contratación</th>
+                    <th>Salario</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Aquí se agregarán los empleados con JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tab de Clientes -->
+        <div class="tab-pane fade" id="clientes" role="tabpanel" aria-labelledby="clientes-tab">
+            <h3>Gestión de Clientes</h3>
+
+            <!-- Formulario de Clientes -->
+            <form id="formCliente">
+                <div class="mb-3">
+                    <label for="cedula" class="form-label">Cédula</label>
+                    <input type="text" class="form-control" id="cedula" required>
+                </div>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombreCliente" required>
+                </div>
+                <div class="mb-3">
+                    <label for="apellidoUno" class="form-label">Apellido Uno</label>
+                    <input type="text" class="form-control" id="apellidoUnoCliente" required>
+                </div>
+                <div class="mb-3">
+                    <label for="apellidoDos" class="form-label">Apellido Dos</label>
+                    <input type="text" class="form-control" id="apellidoDosCliente" required>
+                </div>
+                <div class="mb-3">
+                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar Cliente</button>
+            </form>
+
+            <!-- Tabla de Clientes -->
+            <h4>Clientes Registrados</h4>
+            <table class="table" id="clientesTable">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Apellido Uno</th>
+                    <th>Apellido Dos</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Aquí se agregarán los clientes con JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Archivo JS Externo -->
+<script src="logica.js"></script>
+</body>
+</html>
+
+

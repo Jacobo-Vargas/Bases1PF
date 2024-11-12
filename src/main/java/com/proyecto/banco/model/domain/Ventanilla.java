@@ -36,7 +36,6 @@ public class Ventanilla implements Serializable {
     private Date fechaCierre;
 
     @ManyToOne
-    @JsonBackReference
     @JoinColumn(name = "sucursal_id", referencedColumnName = "id")
     private Sucursal sucursal;
 }

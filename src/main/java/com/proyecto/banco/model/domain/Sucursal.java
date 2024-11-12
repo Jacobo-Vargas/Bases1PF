@@ -37,18 +37,19 @@ public class Sucursal implements Serializable {
     @Column(name = "telefono")
     private String telefono;
 
-    @OneToMany
-    @JsonManagedReference
-    @JoinColumn(name = "sucursal_id")
-    private List<Cliente> clientes;
+//    @OneToMany
+//    @JsonManagedReference("clientesSucursalReference")  // Debe coincidir con el nombre en Cliente
+//    @JoinColumn(name = "sucursal_id")
+//    private List<Cliente> clientes;
+//
+//    @OneToMany
+//    @JsonManagedReference("ventanillasSucursalReference")  // Debe coincidir con el nombre en Ventanilla
+//    @JoinColumn(name = "sucursal_id")
+//    private List<Ventanilla> ventanillas;
+//
+//    @OneToMany
+//    @JsonManagedReference("empleadosSucursalReference")  // Debe coincidir con el nombre en Empleado
+//    @JoinColumn(name = "sucursal_id")
+//    private List<Empleado> empleados;
 
-    @OneToMany
-    @JsonManagedReference
-    @JoinColumn(name = "sucursal_id")
-    private List<Ventanilla> ventanillas;
-
-    @OneToMany
-    @JsonManagedReference
-    @JoinColumn(name = "sucursal_id")
-    private List<Empleado> empleados;
 }

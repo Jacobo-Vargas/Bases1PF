@@ -48,16 +48,15 @@ public class Cliente implements Serializable {
     @OneToOne
     private TipoCliente tipoCliente;
 
-    @ManyToOne
-    @JsonBackReference
+    @ManyToOne // Cambié el nombre de la referencia
     @JoinColumn(name = "sucursal_id", referencedColumnName = "id")
     private Sucursal sucursal;
-
-    @OneToMany(mappedBy = "cliente")
-    @JsonManagedReference
-    private List<Cuenta> cuentas;
-
-    @OneToMany(mappedBy = "cliente")
-    @JsonManagedReference
-    private List<Solicitud> solicitudes;
+//
+//    @OneToMany(mappedBy = "cliente")
+//    @JsonManagedReference("clienteCuentasReference")  // Nombre único para la relación con Cuenta
+//    private List<Cuenta> cuentas;
+//
+//    @OneToMany(mappedBy = "cliente")
+//    @JsonManagedReference("clienteSolicitudesReference")  // Nombre único para la relación con Solicitud
+//    private List<Solicitud> solicitudes;
 }

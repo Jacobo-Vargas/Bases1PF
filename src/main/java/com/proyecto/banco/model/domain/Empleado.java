@@ -1,6 +1,7 @@
 package com.proyecto.banco.model.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -44,8 +45,7 @@ public class Empleado implements Serializable {
     @Column(name = "apellido_dos")
     private String apellidoDos;
 
-    @ManyToOne
-    @JsonBackReference
+    @ManyToOne // Cambié el nombre de la referencia
     @JoinColumn(name = "sucursal_id", referencedColumnName = "id")
     private Sucursal sucursal;
 
