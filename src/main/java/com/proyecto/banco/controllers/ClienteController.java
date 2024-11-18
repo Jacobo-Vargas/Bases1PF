@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -77,6 +78,25 @@ public class ClienteController {
             return ResponseEntity.ok(cliente);
         } else {
             return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping("/cedula")
+    public ResponseEntity<?> obtenerClientePorCedula(@RequestParam String cedula) {
+        Cliente cliente = clienteRepository.obtenerClientePorCedula(cedula);
+        if (cliente != null) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("type_message","success");
+            response.put("message", "Se obtuvieron los datos con éxito");
+            response.put("data", cliente);
+
+            return ResponseEntity.ok(response);
+        } else {
+            Map<String, Object> response = new HashMap<>();
+            response.put("type_message","warning");
+            response.put("message", "No se encontraron datos");
+            response.put("data", null);
+            return ResponseEntity.ok(response);
         }
     }
 

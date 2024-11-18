@@ -48,4 +48,8 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
     @Query(value = "SELECT * FROM public.cliente WHERE id = :id", nativeQuery = true)
     Cliente obtenerClientePorId(@Param("id") Integer id);
+
+    @Query(value = "SELECT * FROM public.cliente WHERE cedula = :cedula LIMIT 1", nativeQuery = true)
+    Cliente obtenerClientePorCedula(@Param("cedula") String cedula);
+
 }
