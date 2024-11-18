@@ -1,7 +1,12 @@
 package com.proyecto.banco.controllers;
 
+import com.proyecto.banco.model.DTO.ClientDTO;
 import com.proyecto.banco.model.domain.Cliente;
+import com.proyecto.banco.model.domain.TipoCliente;
 import com.proyecto.banco.repository.ClienteRepository;
+import com.proyecto.banco.repository.TipoClienteRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.postgresql.util.PSQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,28 +18,48 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @RestController
+@Slf4j
 @RequestMapping("/api/clientes")
 public class ClienteController {
 
     @Autowired
     private ClienteRepository clienteRepository;
 
+    @Autowired
+    private TipoClienteRepository tipoClienteRepository;
+
     // Crear Cliente (POST)
     @PostMapping
-    public ResponseEntity<String> crearCliente(@RequestBody Cliente cliente) {
+    public ResponseEntity<Object> crearCliente(@RequestBody ClientDTO cliente) {
+
+        if (cliente.getNombre() == null || cliente.getCedula() == null || cliente.getTipoCliente() == null) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("type_message","error");
+            response.put("message", "Verifique los campos");
+            return ResponseEntity.ok(response);
+        }
+
         clienteRepository.insertarCliente(
                 cliente.getCedula(),
                 cliente.getNombre(),
                 cliente.getApellidoUno(),
                 cliente.getApellidoDos(),
                 cliente.getFechaNacimiento(),
-                cliente.getTipoCliente() != null ? cliente.getTipoCliente().getId() : null,
-                cliente.getSucursal() != null ? cliente.getSucursal().getId() : null
+                cliente.getTipoCliente(),
+                cliente.getSucursal() != null ? cliente.getSucursal() : null
         );
-        return ResponseEntity.ok("Cliente creado con éxito");
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("type_message","success");
+        response.put("message", "Operación realizada con exito");
+
+        return ResponseEntity.ok(response);
     }
 
     // Obtener todos los Clientes (GET)
@@ -55,12 +80,18 @@ public class ClienteController {
         }
     }
 
+    @GetMapping("/tipo-cliente")
+    public ResponseEntity<List<TipoCliente>> obtenerTipoCliente() {
+        List<TipoCliente> lista = tipoClienteRepository.findAll();
+        return ResponseEntity.ok(lista);
+    }
+
     // Actualizar Cliente (PUT)
     @PutMapping("/{id}")
-    public ResponseEntity<String> actualizarCliente(@PathVariable Integer id, @RequestBody Cliente cliente) {
-        if (clienteRepository.existsById(id)) {
-            cliente.setId(id);
-            Cliente existente = clienteRepository.obtenerClientePorId(id);
+    public ResponseEntity<Object> actualizarCliente( @RequestBody ClientDTO cliente) {
+        if (clienteRepository.existsById(cliente.getId())) {
+            cliente.setId(cliente.getId());
+            Cliente existente = clienteRepository.obtenerClientePorId(cliente.getId());
             clienteRepository.actualizarCliente(
                     cliente.getId(),
                     cliente.getCedula(),
@@ -68,21 +99,37 @@ public class ClienteController {
                     cliente.getApellidoUno(),
                     cliente.getApellidoDos(),
                     cliente.getFechaNacimiento(),
-                    cliente.getTipoCliente() != null ? cliente.getTipoCliente().getId() : null,
-                    cliente.getSucursal() != null ? cliente.getSucursal().getId() : null
+                    cliente.getTipoCliente() != null ? cliente.getTipoCliente() : null,
+                    cliente.getSucursal() != null ? cliente.getSucursal() : null
             );
-            return ResponseEntity.ok("Cliente actualizado con éxito");
+            Map<String, Object> response = new HashMap<>();
+            response.put("type_message","success");
+            response.put("message", "Operación realizada con exito");
+            return ResponseEntity.ok(response);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
     // Eliminar Cliente (DELETE)
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarCliente(@PathVariable Integer id) {
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Object> eliminarCliente(@PathVariable Integer id) {
         if (clienteRepository.existsById(id)) {
-            clienteRepository.eliminarClientePorId(id);
-            return ResponseEntity.ok("Cliente eliminado con éxito");
+
+            try {
+                clienteRepository.eliminarClientePorId(id);
+                Map<String, Object> response = new HashMap<>();
+                response.put("type_message","success");
+                response.put("message", "Operación realizada con exito");
+                return ResponseEntity.ok(response);
+
+            } catch (Exception e) {
+                log.info("Tiene datos asociados.");
+            }
+            Map<String, Object> response = new HashMap<>();
+            response.put("type_message","error");
+            response.put("message", "No se pudo eliminar, tiene cuentas asociadas");
+            return ResponseEntity.ok(response);
         } else {
             return ResponseEntity.notFound().build();
         }
