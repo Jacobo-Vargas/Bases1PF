@@ -53,7 +53,7 @@ public class ClienteController {
                 cliente.getApellidoDos(),
                 cliente.getFechaNacimiento(),
                 cliente.getTipoCliente(),
-                cliente.getSucursal() != null ? cliente.getSucursal() : null
+                cliente.getSucursal()
         );
 
         Map<String, Object> response = new HashMap<>();
@@ -111,7 +111,6 @@ public class ClienteController {
     public ResponseEntity<Object> actualizarCliente( @RequestBody ClientDTO cliente) {
         if (clienteRepository.existsById(cliente.getId())) {
             cliente.setId(cliente.getId());
-            Cliente existente = clienteRepository.obtenerClientePorId(cliente.getId());
             clienteRepository.actualizarCliente(
                     cliente.getId(),
                     cliente.getCedula(),
@@ -119,8 +118,8 @@ public class ClienteController {
                     cliente.getApellidoUno(),
                     cliente.getApellidoDos(),
                     cliente.getFechaNacimiento(),
-                    cliente.getTipoCliente() != null ? cliente.getTipoCliente() : null,
-                    cliente.getSucursal() != null ? cliente.getSucursal() : null
+                    cliente.getTipoCliente(),
+                    cliente.getSucursal()
             );
             Map<String, Object> response = new HashMap<>();
             response.put("type_message","success");

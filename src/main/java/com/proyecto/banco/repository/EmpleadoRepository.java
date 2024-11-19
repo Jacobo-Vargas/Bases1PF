@@ -1,5 +1,6 @@
 package com.proyecto.banco.repository;
 
+import com.proyecto.banco.model.domain.Cliente;
 import com.proyecto.banco.model.domain.Empleado;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,6 +14,10 @@ import java.util.Date;
 
 @Repository
 public interface EmpleadoRepository extends JpaRepository<Empleado, Integer> {
+
+    @Query(value = "SELECT * FROM public.empleado WHERE salario = :salario order by fecha_contratacion Desc LIMIT 1", nativeQuery = true)
+    Empleado obtenerEmpleadoPorSalario(@Param("salario") BigDecimal salario);
+
 
     @Query(value = "SELECT * FROM public.empleado WHERE id = :id", nativeQuery = true)
     Empleado getEmpleadoById(@Param("id") Integer id);
