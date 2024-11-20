@@ -1,0 +1,749 @@
+{
+  "CASHIER": {
+    "CONTRIBUTIONPLANAMOUNT": "Plan de aportes mensual"
+  },
+  "advisor": {
+    "errors": {
+      "fullName": "Ingrese el nombre completo",
+      "username": "Ingrese el nombre de usuario"
+    }
+  },
+  "advisorLayout": {
+    "actions": "Acciones",
+    "agency": "Agencia",
+    "fullName": "Nombre completo",
+    "status": "Estado",
+    "tableName": "Asesores",
+    "title": "Información del asesor",
+    "username": "Nombre de usuario"
+  },
+  "alert": {
+    "addCheckInformation": "Tienes que agregar la información del cheque",
+    "addFingerPrintValidation": "Debemos hacer una validación biometrica por tu seguridad!",
+    "alreadyWithObligations": "El usuario ya se encuentra desasociado con obligaciones pendientes",
+    "amountOutIfLimits": "Monto fuera de limites",
+    "approvedAmountExceeded": "Se excede el monto aprobado para el crédito",
+    "blockedAccount": "Cuenta bloqueada, no puedes realizar ninguna transacción",
+    "blockedDepositAccount": "Cuenta bloqueada para depósito, no puedes realizar ninguna transacción",
+    "blockedWithdrawAccount": "Cuenta bloqueada para retiros, no puedes realizar ninguna transacción",
+    "bridgeAccount": "El monto ya se encuentra en la cuenta puente del asociado.",
+    "btnAccept": "Aceptar",
+    "btnCancel": "Cancelar",
+    "checkAmountExceeded": "Monto de cheque excedido",
+    "checkPaymentEmpty": "Debes completar todos los campos para añadir un cheque",
+    "confirmationDelete": "¿Seguro que desea eliminar éste archivo?",
+    "deleteElement": "¿Desea eliminar el elemento de la lista?",
+    "deleteMessage": "¿Desea eliminar el registro?",
+    "editMessage": "¿Desea descartar los cambios?",
+    "errorFingerprintReader": "No se detectó ningún lector de huellas.",
+    "errorNotMatchPassword": "Las contraseñas no coinciden",
+    "errorPassword": "La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas, un número y un carácter especial",
+    "exitTransaction": "Por favor verifique que se encuentre una transacción de salida y mínimo una transacción de entrada.",
+    "fieldHistoryTransactions": "Debes completar el campo para proceder con la solicitud",
+    "fingerPrintValidation": "Debes diligenciar la información biométrica",
+    "firstHolderData": "Primero debes diligencias los datos obligatorios del titular",
+    "firstOpenTeller": "Primero debes aperturar tu caja para hacer esta transacción!",
+    "inactiveUser": "El usuario esta inactivo",
+    "loading": "Cargando...",
+    "noCheckbooksAvailable": "No hay chequeras disponibles",
+    "notAssociateInformation": "Debes diligenciar la información obligatoria de la persona.",
+    "notFoundAccount": "No se encontraron cuentas puente",
+    "notRegisteredClientForThisTransaction": "No se encontró un cliente para realizar esta transacción",
+    "processTransactionData": "El total de la transacción debe ser mayor a $0",
+    "processTransactionDataRefund": "El valor a devolver debe ser mayor o igual a $0",
+    "processingTransaction": "Procesando transacción",
+    "repeatedElement": "El elemento indicado ya se encuentra en la lista",
+    "saveMessage": "Información guardada con éxito",
+    "searchAssociate": "Realice la búsqueda del asociado para obtener sus respectivos convenios.",
+    "sizeFile": "El tamaño del archivo no debe exceder las 5MB",
+    "title": "Advertencia"
+  },
+  "audit": {
+    "action": "Acción",
+    "actions": "Acciones",
+    "assignedTo": "Asignado a",
+    "assignmentHistory": "Auditoría de asignación y reasignación de asociados",
+    "associate": "Asociado",
+    "auditAdvisor": "Auditorías del asesor",
+    "auditReferral": "Auditorías del referido",
+    "auditStatusContact": "Auditorías del estado de contacto",
+    "auditTypeContact": "Auditorías del tipo de contacto",
+    "eventDate": "Fecha del evento",
+    "idUpdated": "ID actualizado",
+    "username": "Nombre de usuario"
+  },
+  "btnAdd": "Agregar",
+  "btnAudit": "Auditoría",
+  "btnBack": "Regresar",
+  "btnContact": "Contactar",
+  "btnContactHistory": "Historial de contactos",
+  "btnCrossInformation": "Información cruzada",
+  "btnDelete": "Eliminar",
+  "btnDownload": "Descargar",
+  "btnEdit": "Editar",
+  "btnExport": "Exportar prospectos",
+  "btnFilter": {
+    "btnClean": "Limpiar filtros",
+    "btnSearch": "Buscar",
+    "hideFilter": "Ocultar filtros",
+    "showFilter": "Mostrar filtros"
+  },
+  "btnImport": "Importar resultado de prospectos",
+  "btnUpload": "Cargar archivo",
+  "btnView": "Ver detalles",
+  "buttonModal": {
+    "btnDelete": "Eliminar",
+    "btnDownload": "Descargar",
+    "btnView": "Visualizar"
+  },
+  "cashier": {
+    "AmountCheck": "Monto en cheque",
+    "account": "Cuenta",
+    "accountNumber": "Número de cuenta",
+    "addCheckInfo": "Agregar información del cheque",
+    "agreement": "Convenio",
+    "amount": "Monto",
+    "associateInformation": "Información del asociado",
+    "balance": "Saldo disponible",
+    "beneficiaryInformation": "Información del beneficiario",
+    "biometricDetails": "Detalles biométricos",
+    "breadCrumbInformationDate": "Fecha y hora actual del sistema",
+    "btnSave": "Guardar",
+    "cancelButton": "Cancelar",
+    "cancelDestinationAccount": "Elige el destino de los fondos",
+    "cashAmount": "Monto en efectivo",
+    "cashierId": "ID cajero",
+    "cashierInformation": "Información del cajero",
+    "cashierName": "Nombre del cajero",
+    "cashiers": "Cajeros",
+    "checkBank": "Banco",
+    "checkDevice": "Revisar dispositivo",
+    "checkDeviceTitle": "Revisar conexión del dispositivo de huellas dactilares",
+    "checkNumber": "Número de cheque",
+    "checkNumberConsecutive": "Número consecutivo",
+    "chooseFingerprintType": "Seleccione la huella a validar",
+    "clientFingerprints": "Huellas dactilares",
+    "clientSignature": "Firma",
+    "createCashier": "Crear cajero",
+    "documentNumber": "Número de documento",
+    "documentType": "Tipo de documento",
+    "endTransaction": "¡Finalización de la transacción!",
+    "errors": {
+      "phoneNumber": "Número de teléfono no permitido"
+    },
+    "facialRegistration": "Registro facial",
+    "failedTransactions": "Transacciones fallidas",
+    "fieldsTransactions": "Campos de transacción",
+    "fingerprint": "Ingrese la huella a validar",
+    "fingerprintType": "Huella a validar",
+    "firstName": "Primer nombre",
+    "firstSurname": "Primer apellido",
+    "fullName": "Nombre completo",
+    "generalInformation": "Información general",
+    "hasTrouble": "Haga clic si el asociado tiene problemas con la huella.",
+    "importantInformation": "Si la persona no es asociada, tendrá que diligenciar un formulario con su respectiva información (La transacción se procesará una vez la diligencie).",
+    "incomingTransactions": "Transacciones de entrada",
+    "informationNote": "Nota",
+    "isBeneficiaryInformation": "La información del beneficiario es la misma que la del titular ?",
+    "isShowBalance": "¿El asociado desea mostrar su saldo ?",
+    "isTransacctionAssociation": "La transacción es de asociación ?",
+    "leftForefinger": "Índice izquierdo",
+    "leftMiddleFinger": "Corazón izquierdo",
+    "listProductsAssociate": "Escoge el producto del cliente",
+    "loansAccounts": "Cuentas de crédito",
+    "move from": "Mover desde",
+    "movementDetails": "Detalles del movimiento",
+    "note": "Nota adicional",
+    "paymentScheduleDetails": "Detalles del calendario de pagos",
+    "processButton": "Procesar",
+    "reason": "Razón",
+    "receivedAmount": "Monto recibido",
+    "refundAmount": "Monto a devolver",
+    "requiresSignatureField": "¿Imprimir campo para firma del asociado?",
+    "rightForefinger": "Índice derecho",
+    "rightMiddleFinger": "Corazón derecho",
+    "savingsAccounts": "Cuentas de ahorro",
+    "secondName": "Segundo nombre",
+    "secondSurname": "Segundo apellido",
+    "seePaymentSchedule": "Ver calendario de pagos",
+    "takeFingerprint": "Tomar huella",
+    "tellerAssigned": "Ventanilla asignada",
+    "tellerId": "ID ventanilla",
+    "total": "Total",
+    "total deposits": "Total de depósitos",
+    "total withdrawals": "Total de retiros",
+    "transactionDetails": "Detalles",
+    "transactionInformation": "Información de la transacción",
+    "transactionType": "Tipo de transacción",
+    "transferOutgoing": "Transacciones de salida",
+    "username": "Nombre de usuario",
+    "validationEvidente": "Validación (Evidente - Data)",
+    "verifyBiometricData": "Verificar biometría",
+    "verifyFingerprintButton": "Verificar huellas"
+  },
+  "charts": {
+    "agency": "Agencia",
+    "indicator": "Indicador",
+    "progress": "Progreso",
+    "status": "Estado"
+  },
+  "check": {
+    "corporateName": "Razón social",
+    "documentNumber": "Número de documento",
+    "firstLastnameBeneficiary": "Primer Apellido del beneficiario",
+    "firstNameBeneficiary": "Primer nombre del beneficiario",
+    "secondLastnameBeneficiary": "Segundo apellido del beneficiario",
+    "secondNameBeneficiary": "Segundo nombre del beneficiario"
+  },
+  "checksLayout": {
+    "modalform": {
+      "create": "Información del cheque"
+    }
+  },
+  "client": {
+    "closureReason": "Motivo de cierre"
+  },
+  "contact": {
+    "gestorAndConsultant": "por favor comuníquese con el gestor operativo o el asesor integral."
+  },
+  "evident": {
+    "descriptionProcess1": "Este proceso tiene como objetivo verificar la identidad de la persona. Para ello, se utiliza información específica, como el tipo de identificación, número de identificación, fecha de expedición del documento, número de celular, nombres y apellidos.",
+    "descriptionProcess2": "El proceso comienza con la validación de los datos proporcionados por la persona. Dependiendo de la información verificada, se determinará el mejor método de validación, que puede ser mediante un código o a través de un cuestionario de preguntas. Es importante tener el celular a la mano y con cobertura.",
+    "descriptionProcess3": "Este proceso permite un máximo de dos intentos.",
+    "skipValidation": {
+      "alert": "Si acepta, omitirá la validación de identidad y podrá continuar con el proceso del formulario. ¿Desea continuar?",
+      "button": "Omitir validación"
+    },
+    "titleProcess": "Proceso de Validación",
+    "validate": "Validar"
+  },
+  "exampleLayout": {
+    "ID": "ID",
+    "code": "Código",
+    "countryName": "Nombre del país"
+  },
+  "exportData": {
+    "action": "Acción",
+    "export": "Exportación",
+    "tableName": "Exportaciones de prospectos",
+    "title": "Detalle de la exportación"
+  },
+  "filter": {
+    "advisorName": "Nombre del Asesor",
+    "agency": "Agencia",
+    "associateName": "Nombre del asesor",
+    "contactChannel": "Canal de contacto",
+    "documentNumber": "Número de documento",
+    "endDate": "Fecha de fin",
+    "name": "Nombre completo",
+    "origin": "Origen",
+    "productNumber": "Número del producto",
+    "referringPerson": "Nombre del remitente",
+    "resourceId": "Identificación del recurso",
+    "startDate": "Fecha de inicio",
+    "statusContact": "Estado del contacto",
+    "transactionDate": "Fecha de transacción"
+  },
+  "footer": {
+    "copyright": "2024 Copyright",
+    "option1": "Opcion 1",
+    "option2": "Opcion 2",
+    "option3": "Opcion 3"
+  },
+  "home": {
+    "messagePart1": "Desde aqui podras hacer todas las transacciones que necesitas!",
+    "messagePart2": "de tu gestión. ¡Ya casi lo consigues!",
+    "welcome": "Bienvenido"
+  },
+  "importData": {
+    "age": "Edad",
+    "approvedQuota": "Cupos aprobados",
+    "evaluationDecisor": "Evaluación Decisor",
+    "financialExpenses": "Datos financieros",
+    "footprints": "Huellas",
+    "import": "Importación",
+    "income": "Ingresos",
+    "internalDesicion": "Decisión interna",
+    "modalName": "Importación",
+    "quantoThree": "Quanto 3",
+    "scoreAcerta": "Score acerta",
+    "title": "Detalle de la Importación",
+    "varCausal": "Var causal",
+    "varMessage": "Var mensaje"
+  },
+  "input": {
+    "documentNumber": {
+      "label": "documentNumber",
+      "title": "Para el número de documento no ingrese puntos y verifique que contengo de 8 a 10 digitos."
+    },
+    "selectCashier": {
+      "title": "Seleccione el cajero para ver las transacciones individuales"
+    }
+  },
+  "labelModal": {
+    "errors": {
+      "errorDocument": "Ingrese el número de documento de manera adecuada",
+      "errorName": "Ingrese el nombre",
+      "errorSurname": "Ingrese el apellido"
+    },
+    "firstName": "Primer Nombre",
+    "firstSurname": "Primer Apellido",
+    "secondName": "Segundo Nombre",
+    "secondSurname": "Segundo Apellido",
+    "submitFile": "Subir Archivo",
+    "submitImage": "Subir Imagen"
+  },
+  "loyaltyLayout": {
+    "browseFiles": "Explorar archivos",
+    "dataCount": "Cantidad de datos",
+    "date": "Fecha",
+    "details": "Detalles",
+    "dropHere": "Arrastra y suelta aquí o",
+    "fileUploaded": "Archivo subido",
+    "id": "ID",
+    "status": "Estado",
+    "tableCrossName": "Datos de clientes",
+    "tableName": "Fidelización por fechas de migración",
+    "user": "Usuario responsable"
+  },
+  "managementHistory": {
+    "active": "Activo",
+    "advisor": "Asesor",
+    "agreementDate": "Fecha del contacto",
+    "agreements": "Contactos",
+    "contactDate": "Fecha de contacto",
+    "contactHistory": "Historial de contactos",
+    "contactType": "Tipo de contacto",
+    "expiredAgreements": "contactos vencidos",
+    "inactive": "Inactivo",
+    "information": "Información de gestión",
+    "modal": {
+      "agreementStatus": "Estado del contacto",
+      "typeStatus": "Estado del tipo del contacto:"
+    },
+    "notInterested": "No está interesado",
+    "observations": "Observaciones",
+    "observationsTitle": "Ingresa tus observaciones",
+    "status": "Estado",
+    "tableName": "Historial de contactos",
+    "title": "Gestiones del producto",
+    "username": "Usuario"
+  },
+  "menu-user": {
+    "changePassword": "Cambiar contraseña",
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar sesión",
+    "option1": "Opción 1",
+    "option2": "Opción 2",
+    "option3": "Opción 3",
+    "password": "Digita tu nueva contraseña",
+    "repeatPassword": "Repita la contraseña",
+    "title": "Perfil"
+  },
+  "menu": {
+    "activationHistory": "Historial de activación",
+    "audits": "Auditorias",
+    "btnSearch": "Buscar",
+    "dtas": "Historial de DTA",
+    "enpactoTransactions": "Transacciones de Enpacto",
+    "home": "Inicio",
+    "nonProductTransactions": "No producto",
+    "page1": "Asignar clientes",
+    "page2": "Referidos propios",
+    "page3": "Configuraciones",
+    "page4": "Configuración",
+    "page5": "Retanqueo",
+    "page6": "Gestionar clientes",
+    "page7": "Prospectos",
+    "page8": "Traslados",
+    "page9": "Historial de traslados",
+    "pdf": "PDF",
+    "productTransactions": "De producto",
+    "prospectManagement": "Gestión de datos de prospectos",
+    "prospectViability": "Viabilidad",
+    "reports": "Reportes",
+    "requestReverse": "Solicitud de reversión",
+    "submenu": {
+      "option1": "Cajeros",
+      "option2": "Tipo de contacto",
+      "option3": "Estado de contacto",
+      "option4": "Asesores"
+    },
+    "teller": "Ventanilla",
+    "title": "Titulo del Menu",
+    "transactionHistory": "Historial de transacciones",
+    "transactionHistoryToReverse": "Historial de solicitudes por reversar",
+    "transactions": "Transacciones",
+    "txtSearch": "Buscar"
+  },
+  "modalFileView": {
+    "btnClose": "Cerrar",
+    "confirmationDelete": "¿Seguro que desea eliminar éste archivo?",
+    "sizeFile": "El tamaño del archivo no debe exceder las 5MB",
+    "title": "Visualizar archivo"
+  },
+  "modalForm": {
+    "advisorForm": "Formulario de asesores"
+  },
+  "modalShow": {
+    "btnClose": "Cerrar",
+    "btnShow": "Mostrar",
+    "closeBtn": "Cerrar",
+    "details": "Detalles",
+    "finish": "Finalizar",
+    "print": "Imprimir",
+    "printCheck": "Imprimir cheque",
+    "reverseRequest": "Quien solicitó"
+  },
+  "modalform": {
+    "btnClose": "Cerrar",
+    "btnContact": "Contactar",
+    "btnForm": "Formulario",
+    "btnSearch": "Buscar",
+    "btnSubmit": "Enviar",
+    "btnUpdate": "Actualizar"
+  },
+  "modalformDTA": {
+    "InformationPersonOperation": "Información de quien realiza la operación",
+    "accountNumber": "Número de cuenta",
+    "additionalInformationDTA": "Información adicional del DTA",
+    "address": "Dirección",
+    "documentType": "Tipo de documento",
+    "firstLastName": "Primer apellido",
+    "firstName": "Primer nombre",
+    "fundsSourceDestination": "Origen o destinos de los fondos",
+    "holdersData": "Datos del titular ",
+    "identification": "Identificación",
+    "informationDTA": "Formulario del DTA",
+    "isHolder": "Los del mismo titular",
+    "phoneNumber": "Numero de teléfono",
+    "secondLastName": "Segundo apellido",
+    "secondName": "Segundo nombre",
+    "status": "Estado"
+  },
+  "navtitle": "Titulo",
+  "ngSelect": {
+    "notFound": "No se encontraron elementos"
+  },
+  "paginator": {
+    "first": "Primera",
+    "goFirst": "Ir a la primera página",
+    "goLast": "Ir a la última página",
+    "last": "Última",
+    "next": "Siguiente",
+    "numItems": "Cantidad de elementos",
+    "numItemsTitle": "Cambia la cantidad de elementos que se visualizan en el paginador",
+    "previous": "Anterior"
+  },
+  "prospectData": {
+    "age": "Edad",
+    "approvedQuota": "Cupos aprobados",
+    "evaluationDecisor": "Evaluación Decisor",
+    "financialExpenses": "Gastos financieros",
+    "footprints": "Huellas",
+    "income": "Ingresos",
+    "internalDecision": "Decisión interna",
+    "quantoThree": "Quanto_three",
+    "scoreAcerta": "Score acerta",
+    "varCausal": "Var_causal",
+    "varMessage": "VAR_MESSAGES"
+  },
+  "prospectJournal": {
+    "selectJournalAction": {
+      "chooseType": "Acción",
+      "options": {
+        "exported": "Exportación",
+        "imported": "Importación"
+      }
+    }
+  },
+  "prospectLayout": {
+    "selectViability": "Seleccione el tipo de viabilidad",
+    "title": "Datos de prospectos"
+  },
+  "referralLayout": {
+    "documentNumber": "Número de documento",
+    "emailAddress": "Correo electrónico",
+    "firstName": "Primer nombre",
+    "firstSurname": "Primer apellido",
+    "fullName": "Nombre completo",
+    "phoneNumber": "No. Teléfono",
+    "referringPerson": "Nombre del remitente",
+    "secondName": "Segundo nombre",
+    "secondSurname": "Segundo apellido",
+    "selectCustomerType": {
+      "chooseType": "Seleccione el tipo de cliente",
+      "options": {
+        "loyalty": "Fidelización",
+        "prospect": "Prospecto",
+        "referral": "Referido",
+        "retanking": "Retanqueo"
+      }
+    },
+    "status": "Estado",
+    "tableName": "Referidos propios"
+  },
+  "referralModal": {
+    "errors": {
+      "fullName": "Ingrese el nombre completo",
+      "referringPerson": "Ingrese el nombre de la persona que hace la remisión"
+    },
+    "title": "Información del referido"
+  },
+  "report": {
+    "btnGenerateReport": "Generar repote",
+    "cashier": "Cajero",
+    "report": "Reporte",
+    "reportType": "Tipo de reporte"
+  },
+  "select": {
+    "chooseType": "Seleccione el tipo de documento",
+    "city": "Ciudad",
+    "country": "País",
+    "department": "Departamento",
+    "options": {
+      "CC": "Cédula de ciudadanía",
+      "CE": "Cédula de extrajería",
+      "TI": "Tarjeta de identidad",
+      "passport": "Pasaporte"
+    },
+    "typeDocument": "Tipo de documento"
+  },
+  "selectStatus": {
+    "chooseType": "Seleccione el estado",
+    "options": {
+      "active": "Activo",
+      "false": "No",
+      "inactive": "Inactivo",
+      "negative": "Fallido",
+      "negativeAgreement": "No está interesado",
+      "positive": "Exitoso",
+      "positiveAgreement": "Está interesado",
+      "true": "Si"
+    }
+  },
+  "statusContactLayout": {
+    "actions": "Acciones",
+    "active": "Activo",
+    "commitment": "Genera contacto",
+    "errors": {
+      "listed": "Ingrese si está listado",
+      "name": "Ingrese el nombre",
+      "status": "Ingrese el estado"
+    },
+    "failed": "Fallido",
+    "inactive": "Inactivo",
+    "listed": "Listado",
+    "name": "Nombre",
+    "no": "NO",
+    "observation": "Tiene Observación",
+    "possibleResults": "Posibles resultados",
+    "possibleResultsTitle": " Posibles resultados de este canal de comunicación",
+    "status": "Estado del resultado del contacto",
+    "successful": "Exitoso",
+    "tableName": "Estado de contacto",
+    "title": "Información de estado de contacto",
+    "yes": "SI"
+  },
+  "statusLoanAccount": {
+    "inArrears": "En mora",
+    "normal": "Normal"
+  },
+  "subStatusAccount": {
+    "block": "Cuenta bloqueada",
+    "blockDeposits": "Depósitos bloqueados",
+    "blockWithdraw": "Retiros bloqueados"
+  },
+  "table": {
+    "acceptReverse": "Acpetar reversión",
+    "actions": "Acciones",
+    "age": "Edad",
+    "audit": "Auditoría",
+    "city": "Ciudad",
+    "closeTeller": "Cierre de caja",
+    "country": "País",
+    "declineReverse": "Rechazar reversión",
+    "delete": "Eliminar",
+    "documentNumber": "Número de documento",
+    "edit": "Editar",
+    "firstName": "Nombre",
+    "fullName": "Nombre completo",
+    "incomingAccount": "Número de cuenta de entrada",
+    "lastName": "Apellido",
+    "numberId": "Número de ID",
+    "openTeller": "Apertura de caja",
+    "outgoingAccount": "Número de cuenta de salida",
+    "phone": "Teléfono",
+    "process": "Proceso",
+    "region": "Departamento",
+    "reverseTransaction": "Solicitar reversion",
+    "select": {
+      "all": "Marcar todo",
+      "none": "Desmarca todo",
+      "title": "Seleccionar"
+    },
+    "successful": "Exitosa",
+    "totalPages": "Total de páginas:",
+    "totalRecords": "Total de registros:",
+    "typeDocument": "Tipo de documento",
+    "unsuccessful": "Fallida",
+    "viewDetails": "Ver detalles"
+  },
+  "teller": {
+    "actions": "Acciones",
+    "agency": "Agencia",
+    "dependant": "Persona a cargo",
+    "disassociate": "Desasociar",
+    "finishDate": "Fecha de finalización",
+    "fromCashierToVault": "Cajero a bóveda",
+    "fromVaultToCashier": "Bóveda a cajero",
+    "isOpen": "Esta abierto ?",
+    "nameTeller": "Nombre de la ventanilla",
+    "netCash": "Efectivo neto",
+    "password": "Digita tu contraseña",
+    "seeCashiers": "Ver cajeros",
+    "startDate": "Fecha de inicio",
+    "status": "Estado",
+    "transactionCashAmount": "Monto en efectivo",
+    "transactionChequeAmount": "Monto de la transacción en cheque",
+    "validateIdentity": "Necesitamos validar tu identidad"
+  },
+  "tellerLayout": {
+    "modalShow": {
+      "secondTitle": "Información del cajero"
+    },
+    "modalform": {
+      "create": "Crear ventanilla",
+      "observations": "Descripción",
+      "title": "Información de la ventanilla"
+    }
+  },
+  "tellers": "Ventanillas",
+  "transaction": {
+    "congratulations1": "¡Felicidades, para el asociado",
+    "congratulations2": "La transacción fue acreditada",
+    "creditAmountBalance": "Monto y saldo del Crédito",
+    "creditBalance": "Saldo",
+    "creditDate": "Fecha",
+    "creditDays": "Dias",
+    "creditFees": "Comisiones",
+    "creditInAdvance": "Por adelantado",
+    "creditInterest": "Interés",
+    "creditOverduePrincipal": "Principal vencido",
+    "creditPaid": "Pagado",
+    "creditPaymentDate": "Fecha de pago",
+    "creditPenalties": "Penalizaciones",
+    "creditPending": "Pendiente",
+    "creditTotalCost": "Costo total del Crédito",
+    "creditTotalFees": "Total de coutas",
+    "detailsEmpty": "Seleccione los detalles de la consignación a la cuenta puente.",
+    "idTransaction": "ID de la transacción",
+    "insufficientAmount": "Monto insuficiente",
+    "internalDeposit": "Transacciones de depósito",
+    "internalWithdrawal": "Transacciones de retiro",
+    "isCheckPay": "Pago en cheque",
+    "paymentInformation": "Información del pago",
+    "phonePrefix": "Prefijo telefónico",
+    "printerInformation": "Información del recibo",
+    "total": "Total",
+    "totalTransaction": "Total de la transacción",
+    "verifyBiometricData": "Debes digitar todos los campos de la verificación biométrica."
+  },
+  "transactionHistory": {
+    "DateAndTime": "Fecha y hora",
+    "OfficeName": "Oficina",
+    "associateDocumentNumber": "Documento del asociado",
+    "commission": "Comisión",
+    "currencyCode": "Moneda",
+    "transactionAmount": "Monto de la transacción",
+    "transactionType": "Tipo de transacción",
+    "typeTransaction": "Tipo de transacción"
+  },
+  "triggerTable": {
+    "InvalidContact": "No valido para retanqueo",
+    "address": "Dirección",
+    "adviser": "Asesor",
+    "advisor": "Asesor",
+    "age": "Edad",
+    "agency": "Agencia",
+    "agreement": "Seguimiento",
+    "assign": "Asignar",
+    "assignmentHistory": "Historial de asignaciones",
+    "balanceAcceptable": "Saldo aceptable",
+    "balanceNotAcceptable": "Saldo no aceptable Retanq.",
+    "balancePr": "Saldo Pr.",
+    "branch": "Sucursal",
+    "btnAssign": "Asignar",
+    "btnReassign": "Reasignar",
+    "childrenNumber": "Número de hijos",
+    "civilStatus": "Estado civil",
+    "consultationDate": "Fecha de Consulta",
+    "customerType": "Tipo de cliente",
+    "dateLastContact": "Fecha último contacto",
+    "daysBacklog": "Dias de atraso",
+    "delinquencyAcceptable": "Mora aceptable",
+    "delinquencyNotAcceptable": "Mora no aceptable Retanq.",
+    "documentNumber": "Número de documento",
+    "economicAct": "Act. Economica",
+    "email": "Correo electrónico",
+    "entityNIT": "NIT entidad",
+    "entityName": "Nombre de la entidad",
+    "firstSurname": "Primer nombre",
+    "fullName": "Nombre completo",
+    "identification": "Identificación",
+    "interestingProduct": "Producto de interés",
+    "lastUpdateDate": "Fecha de la última actualización",
+    "loyalty": "Fidelización",
+    "modalShow": {
+      "secondTitle": "Información de contacto del cliente"
+    },
+    "modalform": {
+      "contact": "Contactar",
+      "errors": {
+        "contactType": "Seleccione el tipo de contacto"
+      }
+    },
+    "nationality": "Nacionalidad",
+    "negativeConsulted": "Consultado negativo",
+    "notConsulted": "No consultado",
+    "occupation": "Ocupación",
+    "origin": "Origen",
+    "phoneNumber": "Número de teléfono",
+    "positiveConsulted": "Consultado positivo",
+    "profession": "Profesión",
+    "prospect": "Prospecto",
+    "rate": "Tasa",
+    "referral": "Referido",
+    "referringPerson": "Remitente",
+    "retanking": "Retanqueo",
+    "status": "Estado",
+    "title": "Archivo original datacrédito",
+    "totalAssets": "Activos totales",
+    "totalHeritage": "Patrimonio total",
+    "totalIncome": "Ingresos totales",
+    "typeContact": "Tipo de contacto",
+    "typeIdentification": "Tipo de identificación",
+    "typePerson": "Tipo de persona",
+    "validContact": "Valido para contactar",
+    "viability": "Viabilidad"
+  },
+  "typeContactLayout": {
+    "actions": "Acciones",
+    "call": "Llamada",
+    "email": "Correo electrónico",
+    "errors": {
+      "listed": "Ingrese Si está listado",
+      "name": "Seleccione el nombre",
+      "status": "Ingrese el estado"
+    },
+    "listed": "Listado",
+    "name": "Nombre",
+    "select": "Seleccione el canal de comunicación",
+    "sms": "SMS",
+    "status": "Estado",
+    "tableName": "Tipo de contacto",
+    "title": "Información del tipo de contacto",
+    "visit": "Visita",
+    "whatsApp": "WhatsApp"
+  }
+}

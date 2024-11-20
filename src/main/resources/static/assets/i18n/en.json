@@ -1,0 +1,743 @@
+{
+  "CASHIER": {
+    "CONTRIBUTIONPLANAMOUNT": "Monthly contribution plan"
+  },
+  "advisor": {
+    "errors": {
+      "fullName": "Enter fullname",
+      "username": "Enter username"
+    }
+  },
+  "advisorLayout": {
+    "actions": "Actions",
+    "agency": "Agency",
+    "fullName": "Full name",
+    "status": "Status",
+    "tableName": "Advisors",
+    "title": "Advisor's information",
+    "username": "Username"
+  },
+  "alert": {
+    "addCheckInformation": "You have to add the check information",
+    "addFingerPrintValidation": "We must do a biometric validation for your safety!",
+    "alreadyWithObligations": "The user is already disassociated with outstanding obligations.",
+    "amountOutIfLimits": "Amount out of limits",
+    "approvedAmountExceeded": "The amount approved for the loan is exceeded",
+    "blockedAccount": "Account blocked, you cannot perform any transaction",
+    "blockedDepositAccount": "Account blocked for deposits, you cannot perform any transaction",
+    "blockedWithdrawAccount": "Account blocked for withdrawal, you cannot perform any transaction",
+    "bridgeAccount": "The amount is already in the associate's bridge account.",
+    "btnAccept": "Accept",
+    "btnCancel": "Cancel",
+    "checkAmountExceeded": "Check Amount Exceeded",
+    "checkPaymentEmpty": "You must complete all fields to add a check",
+    "confirmationDelete": "Are you sure you want to delete this file?",
+    "deleteElement": "Do you want to remove the item from the list?",
+    "deleteMessage": "Do you want to delete the record?",
+    "editMessage": "Do you wish to discard the changes?",
+    "errorFingerprintReader": "No fingerprint reader was detected.",
+    "errorNotMatchPassword": "Passwords do not match",
+    "errorPassword": "The password must be at least 8 characters long, including uppercase, lowercase, a number and a special character.",
+    "exitTransaction": "Please verify that one outbound transaction and at least one inbound transaction are found.",
+    "fieldHistoryTransactions": "You must complete the field to proceed with the application",
+    "fingerPrintValidation": "You must complete the biometric information",
+    "firstHolderData": "First you must fill in the obligatory data of the holder",
+    "firstOpenTeller": "You must first open your cash register to make this transaction.",
+    "inactiveUser": "The user is inactive",
+    "loading": "Loading...",
+    "noCheckbooksAvailable": "No checkbooks available",
+    "notAssociateInformation": "You must fill in the mandatory information of the person.",
+    "notFoundAccount": "No bridging accounts found",
+    "notRegisteredClientForThisTransaction": "Not registered client for this transaction",
+    "processTransactionData": "Transaction total must be greater than $0",
+    "processTransactionDataRefund": "The value to return must be greater than or equal to $0.",
+    "processingTransaction": "Processing transaction",
+    "repeatedElement": "The indicated item is already in the list",
+    "saveMessage": "Information successfully saved",
+    "searchAssociate": "Search for the partner to obtain their respective agreements.",
+    "sizeFile": "File size should not exceed 5MB.",
+    "title": "Warning"
+  },
+  "audit": {
+    "action": "Action",
+    "actions": "Actions",
+    "assignedTo": "Assigned to",
+    "assignmentHistory": "Customers assignment and reassignment audit",
+    "associate": "Associate",
+    "auditAdvisor": "Advisor Audits",
+    "auditReferral": "Referral's Audits",
+    "auditStatusContact": "Contact status audits",
+    "auditTypeContact": "Contact type audits",
+    "eventDate": "Event date",
+    "idUpdated": "ID Updated",
+    "username": "Username"
+  },
+  "btnAdd": "Add",
+  "btnAudit": "Audit",
+  "btnBack": "Return",
+  "btnContact": "Contact",
+  "btnContactHistory": "Contact history",
+  "btnCrossInformation": "Cross information",
+  "btnDelete": "Delete",
+  "btnDownload": "Download",
+  "btnEdit": "Edit",
+  "btnExport": "Export prospects",
+  "btnFilter": {
+    "btnClean": "Clean Filters",
+    "btnSearch": "Search",
+    "hideFilter": "Hide Filters",
+    "showFilter": "Show Filters"
+  },
+  "btnImport": "Import prospects result",
+  "btnUpload": "Upload file",
+  "btnView": "View details",
+  "buttonModal": {
+    "btnDelete": "Delete",
+    "btnDownload": "Download",
+    "btnView": "View"
+  },
+  "cashier": {
+    "AmountCheck": "Amount in check",
+    "account": "Account",
+    "accountNumber": "Account number",
+    "addCheckInfo": "Add check information",
+    "agreement": "Agreement",
+    "amount": "Amount",
+    "associateInformation": "Associate information",
+    "balance": "Available balance",
+    "beneficiaryInformation": "Beneficiary information",
+    "biometricDetails": "Biometric details",
+    "breadCrumbInformationDate": "Current system date and time",
+    "btnSave": "Save",
+    "cancelButton": "Cancel",
+    "cancelDestinationAccount": "Choose funds destination",
+    "cashAmount": "Cash amount",
+    "cashierId": "Cashier ID",
+    "cashierInformation": "Cashier information",
+    "cashierName": "Cashier name",
+    "cashiers": "Cashiers",
+    "checkBank": "Bank",
+    "checkDevice": "Check device",
+    "checkDeviceTitle": "Check fingerprint device connection",
+    "checkNumber": "Check number",
+    "checkNumberConsecutive": "Consecutive number",
+    "chooseFingerprintType": "Select the fingerprint to validate",
+    "clientFingerprints": "Fingerprints",
+    "clientSignature": "Signature",
+    "createCashier": "Create cashier",
+    "documentNumber": "Document number",
+    "documentType": "Document type",
+    "endTransaction": "¡End transaction!",
+    "errors": {
+      "phoneNumber": "Phone number not allowed"
+    },
+    "facialRegistration": "Facial registration",
+    "failedTransactions": "Failed transactions",
+    "fieldsTransactions": "Trnsactions fields",
+    "fingerprint": "Enter the fingerprint to validate",
+    "fingerprintType": "Fingerprint to validate",
+    "firstName": "First name",
+    "firstSurname": "First surname",
+    "fullName": "Full name",
+    "generalInformation": "General information",
+    "hasTrouble": "Click here if the associate has problems with the fingerprint.",
+    "importantInformation": "If the person is not an associate, you will have to fill out a form with his or her respective information (The transaction will be processed once it is filled out).",
+    "incomingTransactions": "Incoming transactions",
+    "informationNote": "Note",
+    "isBeneficiaryInformation": "Is the beneficiary's information the same as the holder's information?",
+    "isShowBalance": "The associate wants to show his balance?",
+    "isTransacctionAssociation": "The transaction is a partnership transaction ?",
+    "leftForefinger": "Left forefinger",
+    "leftMiddleFinger": "Left middle finger",
+    "listProductsAssociate": "Choose the customer's product",
+    "loansAccounts": "Loans accounts",
+    "move from": "Move from",
+    "movementDetails": "Movement details",
+    "note": "Additional note",
+    "paymentScheduleDetails": "Payment schedule details",
+    "processButton": "Process",
+    "reason": "Reason",
+    "receivedAmount": "Received amount",
+    "refundAmount": "Refund amount",
+    "requiresSignatureField": "Print field for associate signature?",
+    "rightForefinger": "Right forefinger",
+    "rightMiddleFinger": "Right middle finger",
+    "savingsAccounts": "Savings accounts",
+    "secondName": "Second name",
+    "secondSurname": "Second surname",
+    "seePaymentSchedule": "See payment schedule",
+    "takeFingerprint": "Take fingerprint",
+    "tellerAssigned": "Teller assigned",
+    "tellerId": "Teller ID",
+    "total": "Total",
+    "total deposits": "Total deposits",
+    "total withdrawals": "Total withdrawals",
+    "transactionDetails": "Details",
+    "transactionInformation": "Transaction information",
+    "transactionType": "Transaction type",
+    "transferOutgoing": "Outgoing transactions",
+    "username": "Username",
+    "validationEvidente": "Validation (Evidente - Data)",
+    "verifyBiometricData": "Verify biometric",
+    "verifyFingerprintButton": "Verify fingerprint"
+  },
+  "charts": {
+    "agency": "Agency",
+    "indicator": "Indicator",
+    "progress": "Progress",
+    "status": "Status"
+  },
+  "check": {
+    "corporateName": "Corporate name",
+    "documentNumber": "Document number",
+    "firstLastnameBeneficiary": "First lastname beneficiary",
+    "firstNameBeneficiary": "Beneficiary's first name",
+    "secondLastnameBeneficiary": "Second lastname beneficiary",
+    "secondNameBeneficiary": "Second name beneficiary"
+  },
+  "checksLayout": {
+    "modalform": {
+      "create": "Check Information"
+    }
+  },
+  "client": {
+    "closureReason": "Closure reason"
+  },
+  "contact": {
+    "gestorAndConsultant": "please contact the operational manager or the integrated consultant."
+  },
+  "evident": {
+    "descriptionProcess1": " This process aims to verify the identity of the person. To do this, specific information is used, such as the type of identification, identification number, date of issue of the document, cell phone number, first and last names.",
+    "descriptionProcess2": "The process begins with the validation of the data provided by the person. Depending on the information verified, the best validation method will be determined, which may be through an OTP (One-Time Password) code or through a questionnaire. It is important to have your cell phone on hand and with coverage.",
+    "descriptionProcess3": " This process allows a maximum of two attempts.",
+    "skipValidation": {
+      "alert": " If you accept, you will skip the identity validation and can continue with the form process. do you wish to continue?",
+      "button": "Skip validation"
+    },
+    "titleProcess": "Validation Process",
+    "validate": "Validate"
+  },
+  "exampleLayout": {
+    "ID": "ID",
+    "code": "Code",
+    "countryName": "Country"
+  },
+  "exportData": {
+    "action": "Action",
+    "export": "Export",
+    "tableName": "Prospect exports",
+    "title": "Export detail"
+  },
+  "filter": {
+    "advisorName": "Advisor's name",
+    "agency": "Agency",
+    "associateName": "Associate name",
+    "contactChannel": "Contact channel",
+    "documentNumber": "Document Number",
+    "endDate": "End date",
+    "name": "Full name",
+    "origin": "Origin",
+    "productNumber": "Product number",
+    "referringPerson": "Referring name",
+    "resourceId": "Resource id",
+    "startDate": "Start date",
+    "statusContact": "Status contact",
+    "transactionDate": "Transaction date"
+  },
+  "footer": {
+    "copyright": "2024 Copyright",
+    "option1": "Option 1",
+    "option2": "Option 2",
+    "option3": "Option 3"
+  },
+  "home": {
+    "messagePart1": "From here you can make all the transactions you need!",
+    "messagePart2": "of your management. You are almost there!",
+    "welcome": "Welcome"
+  },
+  "importData": {
+    "age": "Age",
+    "approvedQuota": "Approved quota",
+    "evaluationDecisor": "Decisor evaluation ",
+    "financialExpenses": "Financial data",
+    "footprints": "Footprints",
+    "import": "Import",
+    "income": "Income",
+    "internalDesicion": "Internal decision ",
+    "modalName": "Import",
+    "quantoThree": "Quanto 3",
+    "scoreAcerta": "Score acerta",
+    "title": "Import detail",
+    "varCausal": "Var causal",
+    "varMessage": "Var message"
+  },
+  "input": {
+    "documentNumber": {
+      "label": "documentNumber",
+      "title": "For the document number do not enter dots and verify that it contains 8 to 10 digits."
+    },
+    "selectCashier": {
+      "title": "Select the cashier to view individual transactions"
+    }
+  },
+  "labelModal": {
+    "errors": {
+      "errorDocument": "Enter the document number correctly",
+      "errorName": "Enter the first name",
+      "errorSurname": "Enter the first surname"
+    },
+    "firstName": "First Name",
+    "firstSurname": "First Lastname",
+    "secondName": "Second Name",
+    "secondSurname": "Second Lastname",
+    "submitFile": "Submit File",
+    "submitImage": "Submit Image"
+  },
+  "loyaltyLayout": {
+    "browseFiles": "Browse files",
+    "dataCount": "Data count",
+    "date": "Date",
+    "details": "Details",
+    "dropHere": "Drag and drop here or",
+    "fileUploaded": "File uploaded",
+    "id": "ID",
+    "status": "Status",
+    "tableCrossName": "Customer data",
+    "tableName": "Loyalty by migration dates",
+    "user": "Responsible user"
+  },
+  "managementHistory": {
+    "active": "Active",
+    "advisor": "Advisor",
+    "agreementDate": "Agreement date",
+    "agreements": "Agreements",
+    "contactDate": "Contact Date",
+    "contactHistory": "Contact history",
+    "contactType": "Contact Type",
+    "expiredAgreements": "Expired agreements",
+    "inactive": "Inactive",
+    "information": "Management information",
+    "modal": {
+      "agreementStatus": "Agreement status",
+      "typeStatus": "Type contact status"
+    },
+    "notInterested": "Not interested",
+    "observations": "Observations",
+    "observationsTitle": "Enter your observations",
+    "status": "Status",
+    "tableName": "Contact history",
+    "title": "Product management",
+    "username": "Username"
+  },
+  "managerModal": {
+    "title": "Referral's information"
+  },
+  "menu-user": {
+    "changePassword": "Change password",
+    "login": "Log in",
+    "logout": "Log out",
+    "option1": "Option 1",
+    "option2": "Option 2",
+    "option3": "Option 3",
+    "password": "Enter your new password",
+    "repeatPassword": "Repeat password",
+    "title": "Profile"
+  },
+  "menu": {
+    "activationHistory": "Activation history",
+    "audits": "Audits",
+    "btnSearch": "Search",
+    "dtas": "DTA history",
+    "enpactoTransactions": "Enpacto transactions",
+    "home": "Home",
+    "nonProductTransactions": "Non-product",
+    "page1": "Assign customers",
+    "page2": "Own referrals",
+    "page3": "Configurations",
+    "page4": "Settings",
+    "page5": "Retanking",
+    "page6": "Manage customers",
+    "page7": "Prospects",
+    "page8": "Internal transfer",
+    "page9": "Transfer history",
+    "pdf": "PDF",
+    "productTransactions": "Of product",
+    "prospectManagement": "Prospect data management",
+    "prospectViability": "Viability",
+    "reports": "Reports",
+    "requestReverse": "reversion request",
+    "submenu": {
+      "option1": "Cashiers",
+      "option2": "Type contact",
+      "option3": "Status contact",
+      "option4": "Advisors"
+    },
+    "teller": "Teller",
+    "title": "Menu Title",
+    "transactionHistory": "Transaction history",
+    "transactionHistoryToReverse": "History of requests to be reversed",
+    "transactions": "Transactions",
+    "txtSearch": "Search"
+  },
+  "modalFileView": {
+    "btnClose": "Close",
+    "confirmationDelete": "Are you sure you want to delete this file?",
+    "sizeFile": "File size should not exceed 5MB.",
+    "title": "View file"
+  },
+  "modalForm": {
+    "advisorForm": "Form advisor"
+  },
+  "modalShow": {
+    "btnClose": "Close",
+    "btnShow": "Show",
+    "closeBtn": "Close",
+    "details": "Details ",
+    "finish": "End",
+    "print": "Print",
+    "printCheck": "Print check",
+    "reverseRequest": "Who requested"
+  },
+  "modalform": {
+    "btnClose": "Close",
+    "btnContact": "Contact",
+    "btnForm": "Form",
+    "btnSearch": "Search",
+    "btnSubmit": "Submit Form",
+    "btnUpdate": "Update"
+  },
+  "modalformDTA": {
+    "InformationPersonOperation": "Information of the person performing the operation",
+    "accountNumber": "Account number",
+    "additionalInformationDTA": "Additional information DTA",
+    "address": "Address",
+    "documentType": "Document type",
+    "firstLastName": "First lastname",
+    "firstName": "First name",
+    "fundsSourceDestination": "Origin or destination of funds",
+    "holdersData": "holder's data",
+    "identification": "Identification",
+    "informationDTA": "DTA Form",
+    "isHolder": "Those of the same owner",
+    "phoneNumber": "Phone number",
+    "secondLastName": "Second lastname",
+    "secondName": "Second name",
+    "status": "Status"
+  },
+  "navtitle": "Title",
+  "ngSelect": {
+    "notFound": "No items found"
+  },
+  "paginator": {
+    "first": "First",
+    "goFirst": "Go to first page",
+    "goLast": "Go to last page",
+    "last": "Last",
+    "next": "Next",
+    "numItems": "Number of elements",
+    "numItemsTitle": "Change the number of elements displayed in the pager",
+    "previous": "Previous"
+  },
+  "prospectData": {
+    "age": "Age",
+    "approvedQuota": "Approved Quota",
+    "evaluationDecisor": "Evaluation Decisor",
+    "financialExpenses": "Financial expenses",
+    "footprints": "Footprints",
+    "income": "Income",
+    "internalDecision": "Internal Decision",
+    "quantoThree": "Quanto_three",
+    "scoreAcerta": "Score acerta",
+    "varCausal": "Var_causal",
+    "varMessage": "VAR_MESSAGES"
+  },
+  "prospectJournal": {
+    "selectJournalAction": {
+      "chooseType": "Action",
+      "options": {
+        "exported": "Exported",
+        "imported": "Imported"
+      }
+    }
+  },
+  "prospectLayout": {
+    "selectViability": "Select the type of viability",
+    "title": "Prospect data"
+  },
+  "referralLayout": {
+    "documentNumber": "Número de documento",
+    "emailAddress": "Email",
+    "firstName": "First name",
+    "firstSurname": "First Surname",
+    "fullName": "Full name",
+    "phoneNumber": "Phone number",
+    "referringPerson": "Referring name",
+    "secondName": " Second name",
+    "secondSurname": "Second Surname",
+    "selectCustomerType": {
+      "chooseType": "Select customer type",
+      "options": {
+        "loyalty": "Loyalty",
+        "prospect": "Prospect",
+        "referral": "Referral",
+        "retanking": "Retanking"
+      }
+    },
+    "status": "Status",
+    "tableName": "Own referrals"
+  },
+  "referralModal": {
+    "errors": {
+      "fullName": "Enter full name",
+      "referringPerson": "Enter the name of the person making the referring"
+    },
+    "title": "Referral information"
+  },
+  "report": {
+    "btnGenerateReport": "Generate report",
+    "cashier": "Cashier",
+    "report": "Report",
+    "reportType": "Report type"
+  },
+  "select": {
+    "chooseType": "Select the type of document",
+    "city": "City",
+    "country": "Country",
+    "department": "Department",
+    "options": {
+      "CC": "Citizenship card",
+      "CE": "International Identity Card",
+      "TI": "Identity card",
+      "passport": "Passport"
+    },
+    "typeDocument": "Type of document"
+  },
+  "selectStatus": {
+    "chooseType": "Select the status",
+    "options": {
+      "active": "Active",
+      "false": "No",
+      "inactive": "Inactive",
+      "negative": "Unsuccessful",
+      "negativeAgreement": "Not interested",
+      "positive": "Successful",
+      "positiveAgreement": "Interested",
+      "true": "Yes"
+    }
+  },
+  "statusContactLayout": {
+    "actions": "Actions",
+    "active": "Active",
+    "commitment": "Generates  Agreement",
+    "errors": {
+      "listed": "Enter if listed",
+      "name": "Enter the name",
+      "status": "Enter the Status"
+    },
+    "failed": "Failed",
+    "inactive": "Inactive",
+    "listed": "Listed",
+    "name": "Name",
+    "no": "NO",
+    "observation": "Has observation",
+    "possibleResults": "Possible results",
+    "possibleResultsTitle": " Possible results of this communication channel",
+    "status": "Contact result status",
+    "successful": "Successful",
+    "tableName": "Contact status",
+    "title": "Contact status information",
+    "yes": "YES"
+  },
+  "table": {
+    "acceptReverse": "Aceept reverse ",
+    "actions": "Actions",
+    "age": "Age",
+    "audit": "Audit",
+    "city": "City",
+    "closeTeller": "Close teller",
+    "country": "Country",
+    "declineReverse": "Decline reverse",
+    "delete": "Delete",
+    "documentNumber": "Document Number",
+    "edit": "Edit",
+    "firstName": "First Name",
+    "fullName": "Full Name",
+    "incomingAccount": "Incoming account number",
+    "lastName": "Last Name",
+    "numberId": "Number ID",
+    "openTeller": "Apertura de caja",
+    "outgoingAccount": "Outgoing account number",
+    "phone": "Phone",
+    "process": "Process",
+    "region": "Region",
+    "reverseTransaction": "Request reversion",
+    "select": {
+      "all": "Check all",
+      "none": "Uncheck all",
+      "title": "Check"
+    },
+    "successful": "Succesful",
+    "totalPages": "Total Pages:",
+    "totalRecords": "Total Records:",
+    "typeDocument": "Document type",
+    "unsuccessful": "Unsuccesful",
+    "viewDetails": "View details"
+  },
+  "teller": {
+    "actions": "Actions",
+    "agency": "Agency",
+    "dependant": "Dependant",
+    "disassociate": "Disassociate",
+    "finishDate": "Finish date",
+    "fromCashierToVault": "Cashier to vaulting",
+    "fromVaultToCashier": "Vaulting to cashier",
+    "isOpen": "Is Open ? ",
+    "nameTeller": "Name teller",
+    "netCash": "Net cash",
+    "password": "Enter your password",
+    "seeCashiers": "View cashiers",
+    "startDate": "Start date",
+    "status": "Status",
+    "transactionCashAmount": "Transaction cash amount",
+    "transactionChequeAmount": "Transaction cheque amount",
+    "validateIdentity": "We need to validate your identity "
+  },
+  "tellerLayout": {
+    "modalShow": {
+      "secondTitle": "Teller information"
+    },
+    "modalform": {
+      "create": "Create teller",
+      "observations": "Description",
+      "title": "Teller information"
+    }
+  },
+  "tellers": "Tellers",
+  "transaction": {
+    "congratulations1": "Congratulations to the partner",
+    "congratulations2": "The transaction was credited to",
+    "creditAmountBalance": "Credit amount and balance",
+    "creditBalance": "Balance",
+    "creditDate": "Date",
+    "creditDays": "Days",
+    "creditFees": "Fees",
+    "creditInAdvance": "In advance",
+    "creditInterest": "Interest",
+    "creditOverduePrincipal": "Overdue principal",
+    "creditPaid": "Paid",
+    "creditPaymentDate": "Payment date",
+    "creditPenalties": "Penalties",
+    "creditPending": "Pending",
+    "creditTotalCost": "Credit total cost",
+    "creditTotalFees": "Total fees",
+    "detailsEmpty": "Select the details of the consignment to the bridge account.",
+    "idTransaction": "Transaction ID",
+    "insufficientAmount": "Insufficient amount",
+    "internalDeposit": "Deposit transactions",
+    "internalWithdrawal": "Withdrawal transactions",
+    "isCheckPay": "Check payment",
+    "paymentInformation": "Payment information",
+    "phonePrefix": "Phone prefix",
+    "printerInformation": "Printer information",
+    "total": "Total",
+    "totalTransaction": "Total transaction",
+    "verifyBiometricData": "You must enter all the fields of the biometric verification."
+  },
+  "transactionHistory": {
+    "DateAndTime": "Date and time",
+    "OfficeName": "Office name",
+    "associateDocumentNumber": "Associate document",
+    "commission": "Commission",
+    "currencyCode": "Currency",
+    "transactionAmount": "Transaction Amount",
+    "transactionType": "Transaction type",
+    "typeTransaction": "Type transaction"
+  },
+  "triggerTable": {
+    "InvalidContact": "Not valid to contact retanking",
+    "address": "Address",
+    "adviser": "Advisor",
+    "advisor": "Advisor",
+    "age": "Age",
+    "agency": "Agency",
+    "agreement": "Follow up",
+    "assign": "Assign ",
+    "assignmentHistory": "Assignment history",
+    "balanceAcceptable": "Balance acceptable",
+    "balanceNotAcceptable": "Balance not acceptable",
+    "balancePr": "Balance Pr.",
+    "branch": "Branch",
+    "btnAssign": "Assign",
+    "btnReassign": "Reassign",
+    "childrenNumber": "Children Number",
+    "civilStatus": "Civil Status",
+    "consultationDate": "Consultation Date",
+    "customerType": "Customer type",
+    "dateLastContact": "Last contact date",
+    "daysBacklog": "Days Backlog",
+    "delinquencyAcceptable": "Delinquency acceptable",
+    "delinquencyNotAcceptable": "Delinquency not acceptable",
+    "documentNumber": "documentNumber",
+    "economicAct": "Economic Act.",
+    "email": "Email",
+    "entityNIT": "Entity NIT",
+    "entityName": "Entity name",
+    "firstSurname": "First surname",
+    "fullName": "Full name",
+    "identification": "Identification",
+    "interestingProduct": "Interesting product",
+    "lastUpdateDate": "Last Update Date",
+    "loyalty": "Loyalty",
+    "modalShow": {
+      "secondTitle": "Customer Contact Information"
+    },
+    "modalform": {
+      "contact": "Contact",
+      "errors": {
+        "contactType": "Select the contact type"
+      }
+    },
+    "nationality": "Nationality",
+    "negativeConsulted": "Negative consulted",
+    "notConsulted": "Not consulted",
+    "occupation": "Occupation",
+    "origin": "Origin",
+    "phoneNumber": "Phone number",
+    "positiveConsulted": "Positive consulted",
+    "profession": "Profession",
+    "prospect": "Prospect",
+    "rate": "Rate",
+    "referral": "Referral",
+    "referringPerson": "Referring",
+    "retanking": "Retanking",
+    "status": "Status",
+    "title": "Original datacredito file",
+    "totalAssets": "Total Assets",
+    "totalHeritage": "Total Heritage",
+    "totalIncome": "Total Income",
+    "typeContact": "Contact type",
+    "typeIdentification": "Type Identification",
+    "typePerson": "Type Person",
+    "validContact": "Valid contact",
+    "viability": "Viability"
+  },
+  "typeContactLayout": {
+    "actions": "Actions",
+    "call": "Call",
+    "email": "Email",
+    "errors": {
+      "listed": "Enter if listed",
+      "name": "Choose the name",
+      "status": "Enter the Status"
+    },
+    "listed": "Listed",
+    "name": "Name",
+    "select": "Select communication channel",
+    "sms": "SMS",
+    "status": "Status",
+    "tableName": "Contact Type",
+    "title": "Contact Type Information",
+    "visit": "Visit",
+    "whatsApp": "WhatsApp"
+  }
+}
