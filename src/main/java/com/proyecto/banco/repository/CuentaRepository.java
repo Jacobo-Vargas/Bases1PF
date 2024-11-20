@@ -1,5 +1,6 @@
 package com.proyecto.banco.repository;
 
+import com.proyecto.banco.model.domain.Cliente;
 import com.proyecto.banco.model.domain.Cuenta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -40,4 +41,8 @@ public interface CuentaRepository extends JpaRepository<Cuenta, Integer> {
 
     @Query(value = "SELECT * FROM public.cuenta WHERE id = :id", nativeQuery = true)
     Cuenta getCuentaById(@Param("id") Integer id);
+
+    @Query(value = "SELECT * FROM public.cuenta WHERE numero_cuenta = :cuenta LIMIT 1", nativeQuery = true)
+    Cuenta obtenerCuentaPorNumeroCuenta(@Param("cuenta") String cuenta);
+
 }

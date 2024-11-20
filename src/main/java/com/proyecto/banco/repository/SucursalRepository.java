@@ -1,5 +1,6 @@
 package com.proyecto.banco.repository;
 
+import com.proyecto.banco.model.domain.Cliente;
 import com.proyecto.banco.model.domain.Sucursal;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -39,4 +40,8 @@ public interface SucursalRepository extends JpaRepository<Sucursal, Integer> {
 
     @Query(value = "SELECT * FROM public.sucursal WHERE id = :id", nativeQuery = true)
     Sucursal getSucursalById(@Param("id") Integer id);
+
+    @Query(value = "SELECT * FROM public.sucursal WHERE nombre = :nombre LIMIT 1", nativeQuery = true)
+    Sucursal obtenerSucursalPorNombre(@Param("nombre") String nombre);
+
 }
