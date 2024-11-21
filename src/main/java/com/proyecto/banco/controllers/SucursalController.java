@@ -69,8 +69,8 @@ public class SucursalController {
         }
     }
 
-    @GetMapping("/nombre")
-    public ResponseEntity<?> obtenerSucursalPorNombre(@RequestParam String nombre) {
+    @GetMapping("/nombre/{nombre}")
+    public ResponseEntity<?> obtenerSucursalPorNombre(@PathVariable String nombre) {
         Sucursal sucursal = sucursalRepository.obtenerSucursalPorNombre(nombre);
         if (sucursal != null) {
             Map<String, Object> response = new HashMap<>();

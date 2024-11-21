@@ -43,6 +43,6 @@ public interface CuentaRepository extends JpaRepository<Cuenta, Integer> {
     Cuenta getCuentaById(@Param("id") Integer id);
 
     @Query(value = "SELECT * FROM public.cuenta WHERE numero_cuenta = :cuenta LIMIT 1", nativeQuery = true)
-    Cuenta obtenerCuentaPorNumeroCuenta(@Param("cuenta") String cuenta);
+    Cuenta obtenerCuentaPorNumeroCuenta(@Param("cuenta") Integer cuenta);
 
 }

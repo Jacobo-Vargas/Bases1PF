@@ -1,11 +1,9 @@
 package com.proyecto.banco.controllers;
 
-import com.proyecto.banco.model.DTO.ClientDTO;
 import com.proyecto.banco.model.DTO.CuentaDTO;
 import com.proyecto.banco.model.domain.Cliente;
 import com.proyecto.banco.model.domain.Cuenta;
 import com.proyecto.banco.model.domain.Producto;
-import com.proyecto.banco.model.domain.TipoCliente;
 import com.proyecto.banco.repository.ClienteRepository;
 import com.proyecto.banco.repository.CuentaRepository;
 import com.proyecto.banco.repository.ProductoRepository;
@@ -80,9 +78,9 @@ public class CuentaController {
         }
     }
 
-    @GetMapping("/numero")
-    public ResponseEntity<?> obtenerCuentaPorNumero(@RequestParam String numero) {
-        Cuenta cuenta = cuentaRepository.obtenerCuentaPorNumeroCuenta(numero);
+    @GetMapping("/numero/{numeroCuenta}")
+    public ResponseEntity<?> obtenerCuentaPorNumero(@PathVariable Integer numeroCuenta) {
+        Cuenta cuenta = cuentaRepository.obtenerCuentaPorNumeroCuenta(numeroCuenta);
         if (cuenta != null) {
             Map<String, Object> response = new HashMap<>();
             response.put("type_message","success");
@@ -152,7 +150,7 @@ public class CuentaController {
             }
             Map<String, Object> response = new HashMap<>();
             response.put("type_message","error");
-            response.put("message", "No se pudo eliminar, tiene cuentas asociadas");
+            response.put("message", "No se pudo eliminar, tiene datos asociados");
             return ResponseEntity.ok(response);
         } else {
             return ResponseEntity.notFound().build();

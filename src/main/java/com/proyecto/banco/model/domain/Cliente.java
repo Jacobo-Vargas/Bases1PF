@@ -51,6 +51,10 @@ public class Cliente implements Serializable {
     @ManyToOne // Cambié el nombre de la referencia
     @JoinColumn(name = "sucursal_id", referencedColumnName = "id")
     private Sucursal sucursal;
+
+    public String getFullName() {
+        return this.nombre + " " + this.apellidoUno;
+    }
 //
 //    @OneToMany(mappedBy = "cliente")
 //    @JsonManagedReference("clienteCuentasReference")  // Nombre único para la relación con Cuenta
