@@ -25,4 +25,11 @@
         </rollback>
     </changeSet>
 
+    <changeSet id="4" author="grupo">
+        <sqlFile path="dbmain/changelog/004.ddl.sql"/>
+        <rollback>
+            <sqlFile path="dbmain/rollback/004.back.sql"/>
+        </rollback>
+    </changeSet>
+
 </databaseChangeLog>

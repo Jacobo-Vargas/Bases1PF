@@ -7930,12 +7930,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AppRoutingModule: () => (/* binding */ AppRoutingModule),
 /* harmony export */   routes: () => (/* binding */ routes)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 9102);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ 9102);
 /* harmony import */ var _app_modules_crud_client_crud_client_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/modules/crud-client/crud-client.component */ 5486);
 /* harmony import */ var _app_modules_crud_empleado_crud_empleado_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app/modules/crud-empleado/crud-empleado.component */ 8466);
 /* harmony import */ var _app_modules_crud_cuenta_crud_cuenta_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/modules/crud-cuenta/crud-cuenta.component */ 7282);
 /* harmony import */ var _app_modules_crud_sucursal_crud_sucursal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/modules/crud-sucursal/crud-sucursal.component */ 5786);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 2978);
+/* harmony import */ var _app_modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app/modules/reports/reports.component */ 4746);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2978);
+
 
 
 
@@ -7955,6 +7957,9 @@ const routes = [{
 }, {
   path: 'crud-sucursal',
   component: _app_modules_crud_sucursal_crud_sucursal_component__WEBPACK_IMPORTED_MODULE_3__.CrudSucursalComponent
+}, {
+  path: 'reports',
+  component: _app_modules_reports_reports_component__WEBPACK_IMPORTED_MODULE_4__.ReportsComponent
 }];
 class AppRoutingModule {
   static {
@@ -7963,20 +7968,20 @@ class AppRoutingModule {
     };
   }
   static {
-    this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({
+    this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineNgModule"]({
       type: AppRoutingModule
     });
   }
   static {
-    this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({
-      imports: [_angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule.forRoot(routes), _angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule]
+    this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector"]({
+      imports: [_angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule.forRoot(routes), _angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule]
     });
   }
 }
 (function () {
-  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](AppRoutingModule, {
-    imports: [_angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule],
-    exports: [_angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule]
+  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵsetNgModuleScope"](AppRoutingModule, {
+    imports: [_angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule],
+    exports: [_angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule]
   });
 })();
 
@@ -8217,6 +8222,9 @@ class MenuComponent {
   navigateToCrudSucursal() {
     this.router.navigate(['/crud-sucursal']);
   }
+  navigateToReports() {
+    this.router.navigate(['/reports']);
+  }
   static {
     this.ɵfac = function MenuComponent_Factory(t) {
       return new (t || MenuComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__.Router));
@@ -8226,9 +8234,9 @@ class MenuComponent {
     this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: MenuComponent,
       selectors: [["app-menu"]],
-      decls: 22,
-      vars: 4,
-      consts: [[1, "container-fluid"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasDarkNavbar", "aria-controls", "offcanvasDarkNavbar", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasDarkNavbar", "aria-labelledby", "offcanvasDarkNavbarLabel", 1, "offcanvas", "offcanvas-start"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3"], [1, "nav-item"], ["data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "nav-link", 3, "click"], [1, "fa-solid", "fa-user"], [1, "fa-solid", "fa-user-gear"], [1, "fa-solid", "fa-credit-card"], [1, "fa-solid", "fa-archway"]],
+      decls: 26,
+      vars: 5,
+      consts: [[1, "container-fluid"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasDarkNavbar", "aria-controls", "offcanvasDarkNavbar", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasDarkNavbar", "aria-labelledby", "offcanvasDarkNavbarLabel", 1, "offcanvas", "offcanvas-start"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3"], [1, "nav-item"], ["data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "nav-link", 3, "click"], [1, "fa-solid", "fa-user"], [1, "fa-solid", "fa-user-gear"], [1, "fa-solid", "fa-credit-card"], [1, "fa-solid", "fa-archway"], [1, "fa-solid", "fa-download"]],
       template: function MenuComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0)(1, "a", 1);
@@ -8261,6 +8269,13 @@ class MenuComponent {
           });
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "i", 11);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "li", 6)(23, "button", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function MenuComponent_Template_button_click_23_listener() {
+            return ctx.navigateToReports();
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "i", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()()();
         }
         if (rf & 2) {
@@ -8272,6 +8287,8 @@ class MenuComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", "Crud Cuenta", " ");
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", "Crud Sucursal", " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", "Descargar Reportes", " ");
         }
       },
       styles: ["\n\n\n\n.btn-close[_ngcontent-%COMP%] {\n    font-size: 12px;\n}\n\n\n\n.offcanvas-header-person[_ngcontent-%COMP%] {\n    color: transparent !important;\n    align-items: start !important;\n    padding: 3% !important;\n}\n\n.dropdown-menu[_ngcontent-%COMP%] {\n    color: #FFFFFF;\n    border-radius: 3px;\n}\n\n.nav-item[_ngcontent-%COMP%]:hover {\n    color: #815656 !important;\n    border-radius: 10px;\n    padding-left: 3%;\n    padding-bottom: 1%;\n    padding-right: 2%;\n}\n\n.nav-link.active[_ngcontent-%COMP%] {\n    color: transparent;\n    border-radius: 10px;\n    padding-left: 5px;\n    padding-right: 52%;\n}\n\n.dropdown-item.active[_ngcontent-%COMP%], .dropdown-item[_ngcontent-%COMP%]:active {\n    border-radius: 8px;\n}\n\n.active-parent[_ngcontent-%COMP%]   .active[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n    color: #ffffff;\n    border-radius: 8px;\n}\n\n\n\n.offcanvas-start[_ngcontent-%COMP%] {\n    background-color: rgba(0, 0, 0, 0.5);\n    \n\n    backdrop-filter: blur(10px);\n    \n\n    -webkit-backdrop-filter: blur(10px);\n    \n\n    border-right: none;\n    \n\n}\n\n\n\n.offcanvas-body-person[_ngcontent-%COMP%]   .nav-link[_ngcontent-%COMP%] {\n    color: #fff;\n    \n\n    font-size: 1.1rem;\n    \n\n    margin-bottom: 15px;\n    \n\n    padding-left: 50px;\n    padding-top: 5px;\n}\n\n\n\n.navbar-toggler[_ngcontent-%COMP%]:hover {\n    background-color: rgba(0, 0, 0, 0.5);\n    \n\n}"]
@@ -9040,7 +9057,7 @@ function CrudCuentaComponent_app_table_25_Template(rf, ctx) {
   if (rf & 2) {
     const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind1"](5, 8, "Listado de empleados"), " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind1"](5, 8, "Listado de cuentas"), " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind1"](9, 10, "Id"));
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
@@ -9778,7 +9795,7 @@ function CrudSucursalComponent_app_table_27_Template(rf, ctx) {
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind1"](5, 8, "Listado de empleados"), " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind1"](5, 8, "Listado de sucursales"), " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind1"](9, 10, "Id"));
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
@@ -9965,6 +9982,165 @@ class CrudSucursalComponent {
       },
       dependencies: [_layout_components_table_table_component__WEBPACK_IMPORTED_MODULE_3__.TableComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.RequiredValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.PatternValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.NgModel, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.NgForm, _angular_common__WEBPACK_IMPORTED_MODULE_7__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_7__.NgIf, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__.TranslatePipe],
       styles: [".panel[_ngcontent-%COMP%] {\n    margin: 100px auto; \n\n    padding: 30px; \n\n    max-width: 800px; \n\n    width: 80%; \n\n    box-sizing: border-box; \n\n    background-color: #fff; \n\n    border-radius: 8px; \n\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); \n\n}"]
+    });
+  }
+}
+
+/***/ }),
+
+/***/ 4746:
+/*!******************************************************!*\
+  !*** ./src/app/modules/reports/reports.component.ts ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReportsComponent: () => (/* binding */ ReportsComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 2978);
+/* harmony import */ var _services_crud_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../services/crud.service */ 2058);
+
+
+class ReportsComponent {
+  constructor(crudService) {
+    this.crudService = crudService;
+    this.reportes = [{
+      id: 1,
+      nombre: 'Reporte Simple 1',
+      titulo: 'Total de clientes agrupados por tipo de cliente'
+    }, {
+      id: 2,
+      nombre: 'Reporte Simple 2',
+      titulo: ' Total de empleados agrupados por sucursal'
+    }, {
+      id: 3,
+      nombre: 'Reporte Simple 3',
+      titulo: ' Total de productos agrupados por tipo de producto'
+    }, {
+      id: 4,
+      nombre: 'Reporte Intermedio 1',
+      titulo: ' Transacciones realizadas en el último mes'
+    }, {
+      id: 5,
+      nombre: 'Reporte Intermedio 2',
+      titulo: ' Clientes y su saldo total (sumatoria de cuentas asociadas)'
+    }, {
+      id: 6,
+      nombre: 'Reporte Intermedio 3',
+      titulo: ' Solicitudes agrupadas por estado de los clientes'
+    }, {
+      id: 7,
+      nombre: 'Reporte Intermedio 4',
+      titulo: ' Ventanillas abiertas actualmente por sucursal'
+    }, {
+      id: 8,
+      nombre: 'Reporte Complejo 1',
+      titulo: ' Histórico de transacciones por cliente y sucursal'
+    }, {
+      id: 9,
+      nombre: 'Reporte Complejo 2',
+      titulo: ' Ingresos totales por sucursal en los últimos 6 meses'
+    }, {
+      id: 10,
+      nombre: 'Reporte Complejo 3',
+      titulo: ' Rentabilidad mensual agrupada por tipo de transacción'
+    }];
+  }
+  descargarReporte(id) {
+    this.crudService.downloadCsvReport(id);
+  }
+  static {
+    this.ɵfac = function ReportsComponent_Factory(t) {
+      return new (t || ReportsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_services_crud_service__WEBPACK_IMPORTED_MODULE_0__.CRUDService));
+    };
+  }
+  static {
+    this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+      type: ReportsComponent,
+      selectors: [["app-reports"]],
+      decls: 34,
+      vars: 0,
+      consts: [[1, "panel", "reportes-container"], [1, "reportes-list"], [1, "reporte-button", 3, "click"], [1, "fa-solid", "fa-download"]],
+      template: function ReportsComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0)(1, "h2");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Descargar Reportes");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 1)(4, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_4_listener() {
+            return ctx.descargarReporte(1);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](5, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, " Reporte Simple 1: Total de clientes agrupados por tipo de cliente ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_7_listener() {
+            return ctx.descargarReporte(2);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](8, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, " Reporte Simple 2: Total de empleados agrupados por sucursal ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_10_listener() {
+            return ctx.descargarReporte(3);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](11, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, " Reporte Simple 3: Total de productos agrupados por tipo de producto ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_13_listener() {
+            return ctx.descargarReporte(4);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](14, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](15, " Reporte Intermedio 1: Transacciones realizadas en el \u00FAltimo mes ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_16_listener() {
+            return ctx.descargarReporte(5);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](17, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](18, " Reporte Intermedio 2: Clientes y su saldo total (sumatoria de cuentas asociadas) ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_19_listener() {
+            return ctx.descargarReporte(6);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](20, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](21, " Reporte Intermedio 3: Solicitudes agrupadas por estado de los clientes ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_22_listener() {
+            return ctx.descargarReporte(7);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](23, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](24, " Reporte Intermedio 4: Ventanillas abiertas actualmente por sucursal ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_25_listener() {
+            return ctx.descargarReporte(8);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](26, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](27, " Reporte Complejo 1: Hist\u00F3rico de transacciones por cliente y sucursal ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_28_listener() {
+            return ctx.descargarReporte(9);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](29, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](30, " Reporte Complejo 2: Ingresos totales por sucursal en los \u00FAltimos 6 meses ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ReportsComponent_Template_button_click_31_listener() {
+            return ctx.descargarReporte(10);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](32, "i", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](33, " Reporte Complejo 3: Rentabilidad mensual agrupada por tipo de transacci\u00F3n ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
+        }
+      },
+      styles: [".reportes-container[_ngcontent-%COMP%] {\n  max-width: 600px;\n  margin: 0 auto;\n  padding: 20px;\n  text-align: center;\n  background-color: #f9f9f9;\n  border-radius: 10px;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n}\n\nh2[_ngcontent-%COMP%] {\n  color: #333;\n  font-size: 24px;\n  margin-bottom: 20px;\n}\n\n.reportes-list[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\n.reporte-button[_ngcontent-%COMP%] {\n  background-color: #4CAF50;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.reporte-button[_ngcontent-%COMP%]:hover {\n  background-color: #45a049;\n}\n\n.panel[_ngcontent-%COMP%] {\n  margin: 100px auto;\n  \n\n  padding: 30px;\n  \n\n  max-width: 800px;\n  \n\n  width: 80%;\n  \n\n  box-sizing: border-box;\n  \n\n  background-color: #fff;\n  \n\n  border-radius: 8px;\n  \n\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n  \n\n}\n\n.reporte-button[_ngcontent-%COMP%] {\n  background-color: #1d1f1d;\n  color: white;\n  padding: 10px 20px;\n  margin: 10px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.reporte-button[_ngcontent-%COMP%]:hover {\n  background-color: #455da1;\n}"]
     });
   }
 }
@@ -10644,6 +10820,42 @@ class CRUDService {
         this.dataForm[listName].splice(index, 1);
       });
     }
+  }
+  /**
+   *
+   * @param reporteId
+   */
+  downloadCsvReport(reporteId) {
+    var _this11 = this;
+    return (0,_home_jacobo_vargas_Documentos_PrBases_front_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      const basicAuth = btoa('admin:admin123');
+      const headers = {
+        'Accept-Language': 'es',
+        'Authorization': `Basic ${basicAuth}`
+      };
+      const url = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.urlServer + '/reportes/reporte/csv/' + reporteId;
+      try {
+        // Solicita el archivo como un Blob (para la descarga)
+        const response = yield _this11.http.get(url, {
+          headers,
+          responseType: 'blob'
+        }).toPromise();
+        if (response) {
+          // Crear un enlace temporal para la descarga del archivo
+          const blob = new Blob([response], {
+            type: 'text/csv'
+          });
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(blob);
+          link.download = 'reporte.csv'; // Puedes asignar un nombre diferente al archivo si lo prefieres
+          link.click(); // Simula el clic para descargar el archivo
+        } else {
+          console.error('La respuesta del servidor no contiene datos válidos para el archivo CSV.');
+        }
+      } catch (error) {
+        console.error('Error fetching or downloading CSV:', error);
+      }
+    })();
   }
   static {
     this.ɵfac = function CRUDService_Factory(t) {
